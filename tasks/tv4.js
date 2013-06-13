@@ -27,15 +27,15 @@ module.exports = function (grunt) {
 		if (t === 'object') {
 			//return Object.prototype.toString.call(value);
 			value = JSON.stringify(value);
-            if (value.length > 40) {
-                value = value.substr(0, 37) + '...';
-            }
-            return value;
-        }
+			if (value.length > 40) {
+				value = value.substr(0, 37) + '...';
+			}
+			return value;
+		}
 		if (t === 'string') {
-            if (value.length > 40) {
-                return JSON.stringify(value.substr(0, 37)) + '...';
-            }
+			if (value.length > 40) {
+				return JSON.stringify(value.substr(0, 37)) + '...';
+			}
 			return JSON.stringify(value);
 		}
 		return '' + value;
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
 				result.path = filepath;
 				result.schema = schema;
 
-				if (!result.valid) {
+				if (!result.valid || result.missing.length > 0) {
 					fail.push(result);
 				}
 				else {
@@ -108,11 +108,11 @@ module.exports = function (grunt) {
 		});
 		var printError = function (error, data, schema, indent) {
 			//grunt.log.writeln(util.inspect(error, false, 4));
-            var value = jsonpoiner.get(data, error.dataPath);
-            var schema = jsonpoiner.get(schema, error.schemaPath);
-            grunt.log.writeln(indent + error.message);
-            grunt.log.writeln(indent + indent + error.dataPath);
-            grunt.log.writeln(indent + indent + '-> value: ' + valueType(value) + ' -> ' + valueStrim(value));
+			var value = jsonpoiner.get(data, error.dataPath);
+			var schema = jsonpoiner.get(schema, error.schemaPath);
+			grunt.log.writeln(indent + error.message);
+			grunt.log.writeln(indent + indent + error.dataPath);
+			grunt.log.writeln(indent + indent + '-> value: ' + valueType(value) + ' -> ' + valueStrim(value));
 			grunt.log.writeln(indent + indent + '-> schema: ' + schema + ' -> ' + error.schemaPath);
 
 			grunt.util._.each(error.subErrors, function (f) {
@@ -132,7 +132,7 @@ module.exports = function (grunt) {
 					printError(result.error, result.data, result.schema, '  ');
 				}
 				if (result.missing.length > 0) {
-					grunt.log.writeln('missing:'.yellow);
+					grunt.log.writeln('missing schemas:'.yellow);
 					grunt.util._.each(result.missing, function (missing) {
 						grunt.log.writeln(missing);
 					});
