@@ -1,6 +1,6 @@
 # grunt-tv4
 
-> Use tv4 to validate files against v4 json-schema
+> Use [tv4](https://github.com/geraintluff/tv4) to validate files against [json-schema](http://json-schema.org/) draft v04
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -19,14 +19,18 @@ grunt.loadNpmTasks('grunt-tv4');
 
 ## The "tv4" task
 
-### Usage Examples
+### Notes
 
-#### Default Options
+* Uses [tv4](https://github.com/geraintluff/tv4) so schemas must conform to [json-schema](http://json-schema.org/) draft v04.
+* Currently only support the [tv4](https://github.com/geraintluff/tv4) synchronous validation mode.
+* Asynchronous support will be added as soon as I got a use-case.
+
+### Default Options
 
 ```js
 grunt.initConfig({
   tv4: {
-    //specify single schema's and multiple data to validate against it
+    //specify single schema's and multiple data to validate
     files: {
       'schema/map_format.json': ['data/map_*.json', 'extra/map_*.json'],
       'schema/lib_format.json': ['data/lib_*.json']
@@ -35,14 +39,13 @@ grunt.initConfig({
 })
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+### Custom Options
 
 ```js
 grunt.initConfig({
   tv4: {
     options: {
-      //register extra schemes by url
+      //pre register extra schemas by URI
       schemas: {
         'http://example.com/schema/v1': {
             'type': 'object'
@@ -58,6 +61,11 @@ grunt.initConfig({
   }
 })
 ```
+
+## History
+
+* 0.1.0 - First release with synchronous validation
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

@@ -1,6 +1,6 @@
 {
   "name": "grunt-tv4",
-  "description": "Use tv4 to validate files against v4 json-schema",
+  "description": "Use tv4 to validate files against json-schema draft v04",
   "version": "0.1.0",
   "homepage": "https://github.com/Bartvds/grunt-tv4",
   "author": {
@@ -38,9 +38,13 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "json",
+    "json-schema",
+    "tv4"
   ],
   "dependencies": {
-    "tv4": "~1.0.3"
+    "tv4": "~1.0.3",
+    "jsonpointer.js": "git://github.com/Bartvds/jsonpointer.js/"
   }
 }
