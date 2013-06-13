@@ -1,6 +1,6 @@
 # grunt-tv4
 
-> Use [tv4](https://github.com/geraintluff/tv4) to validate files against [json-schema](http://json-schema.org/) draft v04
+> Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate files against [json-schema](http://json-schema.org/) draft v04
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -21,9 +21,9 @@ grunt.loadNpmTasks('grunt-tv4');
 
 ### Notes
 
-* Uses [tv4](https://github.com/geraintluff/tv4) so schemas must conform to [json-schema](http://json-schema.org/) draft v04.
-* Currently only support the [tv4](https://github.com/geraintluff/tv4) synchronous validation mode.
-* Asynchronous support will be added as soon as I got a use-case.
+* Uses [Tiny Validator tv4 ](https://github.com/geraintluff/tv4) so schemas must conform to [json-schema draft v04](http://json-schema.org/documentation.html),
+* Currently only supports the synchronous validation mode.
+* Asynchronous support should will be added as soon as I got time or a use-case.
 
 ### Default Options
 
