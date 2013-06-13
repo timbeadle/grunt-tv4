@@ -1,0 +1,10 @@
+{
+	"properties": {
+		"intKey": {
+			"type": "integer"
+		},
+		"stringKey": {
+			"type": "string"
+		}
+	}
+}

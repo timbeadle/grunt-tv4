@@ -1,0 +1,46 @@
+{
+  "name": "grunt-tv4",
+  "description": "Use tv4 to validate files against v4 json-schema",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Bartvds/grunt-tv4",
+  "author": {
+    "name": "Bart van der Schoor",
+    "email": "bartvanderschoor@gmail.com",
+    "url": "https://github.com/Bartvds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bartvds/grunt-tv4"
+  },
+  "bugs": {
+    "url": "https://github.com/Bartvds/grunt-tv4/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Bartvds/grunt-tv4/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "tv4": "~1.0.3"
+  }
+}
