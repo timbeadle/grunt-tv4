@@ -15,7 +15,6 @@ module.exports = function (grunt) {
 			all: [
 				'Gruntfile.js',
 				'tasks/*.js',
-				'<%= nodeunit.tests %>'
 			],
 			options: {
 				jshintrc: '.jshintrc'
@@ -29,10 +28,6 @@ module.exports = function (grunt) {
 					'test/fixtures/object_props/schema.json': ['test/fixtures/object_props/pass.json', 'test/fixtures/object_props/fail.json']
 				}
 			}
-		},
-		// Unit tests.
-		nodeunit: {
-			tests: ['test/*_test.js']
 		}
 	});
 
@@ -41,7 +36,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-	grunt.registerTask('test', ['tv4', 'nodeunit']);
+	grunt.registerTask('test', ['tv4']);
 
 	grunt.registerTask('default', ['jshint', 'test']);
 
