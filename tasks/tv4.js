@@ -47,7 +47,7 @@ module.exports = function (grunt) {
 
 		var tv4 = require('tv4').tv4;
 		var util = require('util');
-		var jsonpoiner = require('jsonpointer.js');
+		var jsonpointer = require('jsonpointer.js');
 
 		var cache = {};
 		var fileCount = 0;
@@ -108,15 +108,15 @@ module.exports = function (grunt) {
 		});
 		var printError = function (error, data, schema, indent) {
 			//grunt.log.writeln(util.inspect(error, false, 4));
-			var value = jsonpoiner.get(data, error.dataPath);
-			var schema = jsonpoiner.get(schema, error.schemaPath);
+			var value = jsonpointer.get(data, error.dataPath);
+			var schema = jsonpointer.get(schema, error.schemaPath);
 			grunt.log.writeln(indent + error.message);
 			grunt.log.writeln(indent + indent + error.dataPath);
 			grunt.log.writeln(indent + indent + '-> value: ' + valueType(value) + ' -> ' + valueStrim(value));
 			grunt.log.writeln(indent + indent + '-> schema: ' + schema + ' -> ' + error.schemaPath);
 
 			grunt.util._.each(error.subErrors, function (f) {
-				prinrError(indent + indent + indent + indent);
+				printError(indent + indent + indent + indent);
 			});
 		};
 
