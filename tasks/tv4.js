@@ -149,7 +149,7 @@ module.exports = function (grunt) {
 			grunt.log.fail('-> '.white + 'tv4 ' + ('validated ' + pass.length).green + ', ' + ('failed ' + fail.length).red);
 			return false;
 		}
-		grunt.log.ok('-> '.white + 'tv4 ' + ('validated ' + pass.length).green);
+		grunt.log.ok('tv4 ' + ('validated ' + pass.length).green);
 	});
 
 };
