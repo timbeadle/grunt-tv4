@@ -42,11 +42,11 @@ module.exports = function (grunt) {
 	};
 	grunt.registerMultiTask('tv4', 'Your task description goes here.', function () {
 		var options = this.options({
-			schemas: {}
+			schemas: {},
+			multi:true
 		});
 
 		var tv4 = require('tv4').tv4;
-		var util = require('util');
 		var jsonpointer = require('jsonpointer.js');
 
 		var cache = {};
@@ -91,7 +91,13 @@ module.exports = function (grunt) {
 				}
 
 				var data = grunt.file.readJSON(filepath);
-				var result = tv4.validateMultiple(data, schema);
+				var result;
+				if (options.multi){
+					result = tv4.validateMultiple(data, schema);
+				}
+				else {
+					result = tv4.validateResult(data, schema);
+				}
 
 				result.data = data;
 				result.path = filepath;
@@ -109,15 +115,16 @@ module.exports = function (grunt) {
 		var printError = function (error, data, schema, indent) {
 			//grunt.log.writeln(util.inspect(error, false, 4));
 			var value = jsonpointer.get(data, error.dataPath);
-			var schema = jsonpointer.get(schema, error.schemaPath);
+			var schemaValue = jsonpointer.get(schema, error.schemaPath);
 			grunt.log.writeln(indent + error.message);
 			grunt.log.writeln(indent + indent + error.dataPath);
 			grunt.log.writeln(indent + indent + '-> value: ' + valueType(value) + ' -> ' + valueStrim(value));
-			grunt.log.writeln(indent + indent + '-> schema: ' + schema + ' -> ' + error.schemaPath);
+			grunt.log.writeln(indent + indent + '-> schema: ' + schemaValue + ' -> ' + error.schemaPath);
 
-			grunt.util._.each(error.subErrors, function (f) {
-				printError(indent + indent + indent + indent);
-			});
+			//untested
+			/*grunt.util._.each(error.subErrors, function (error) {
+				printError(error, data, schema, indent + indent + indent + indent);
+			});*/
 		};
 
 		if (fail.length > 0) {

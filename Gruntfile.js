@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'tasks/*.js',
+				'tasks/*.js'
 			],
 			options: {
 				jshintrc: '.jshintrc'
@@ -36,8 +36,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-	grunt.registerTask('test', ['tv4']);
+	grunt.registerTask('test', ['jshint', 'tv4']);
 
-	grunt.registerTask('default', ['jshint', 'test']);
+	grunt.registerTask('default', ['test']);
 
 };
