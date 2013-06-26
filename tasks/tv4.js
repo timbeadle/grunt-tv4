@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('tv4', 'Your task description goes here.', function () {
 		var options = this.options({
 			schemas: {},
-			multi:true
+			multi:false
 		});
 
 		var tv4 = require('tv4').tv4;

@@ -27,6 +27,14 @@ module.exports = function (grunt) {
 				files: {
 					'test/fixtures/object_props/schema.json': ['test/fixtures/object_props/pass.json', 'test/fixtures/object_props/fail.json']
 				}
+			},
+			multi: {
+				options: {
+					multi:true
+				},
+				files: {
+					'test/fixtures/object_props/schema.json': ['test/fixtures/object_props/fail.json']
+				}
 			}
 		}
 	});
