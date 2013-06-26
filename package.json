@@ -5,7 +5,6 @@
   "homepage": "https://github.com/Bartvds/grunt-tv4",
   "author": {
     "name": "Bart van der Schoor",
-    "email": "bartvanderschoor@gmail.com",
     "url": "https://github.com/Bartvds"
   },
   "repository": {
@@ -21,6 +20,12 @@
       "url": "https://github.com/Bartvds/grunt-tv4/blob/master/LICENSE-MIT"
     }
   ],
+  "keywords": [
+    "gruntplugin",
+    "json",
+    "json-schema",
+    "tv4"
+  ],
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
@@ -28,22 +33,17 @@
   "scripts": {
     "test": "grunt test"
   },
+  "dependencies": {
+    "tv4": "~1.0.3",
+    "jsonpointer.js": "~0.3.0"
+  },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-cli": "~0.1",
     "grunt": "~0.4.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
-  },
-  "keywords": [
-    "gruntplugin",
-    "json",
-    "json-schema",
-    "tv4"
-  ],
-  "dependencies": {
-    "tv4": "~1.0.3",
-    "jsonpointer.js": "~0.3.0"
   }
 }

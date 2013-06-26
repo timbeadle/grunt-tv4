@@ -1,5 +1,7 @@
 # grunt-tv4
 
+[![Build Status](https://secure.travis-ci.org/Bartvds/grunt-tv4.png?branch=master)](http://travis-ci.org/Bartvds/grunt-tv4) [![Dependency Status](https://gemnasium.com/Bartvds/grunt-tv4.png)](https://gemnasium.com/Bartvds/grunt-tv4) [![NPM version](https://badge.fury.io/js/grunt-tv4.png)](http://badge.fury.io/js/grunt-tv4)
+
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate files against [json-schema](http://json-schema.org/) draft v04
 
 ## Getting Started

@@ -21,16 +21,23 @@ module.exports = function (grunt) {
 			}
 		},
 		tv4: {
-			base: {
+			pass: {
+				options: {
+				},
+				files: {
+					'test/fixtures/object_props/schema.json': ['test/fixtures/object_props/pass.json']
+				}
+			},
+			fail_single: {
 				options: {
 				},
 				files: {
 					'test/fixtures/object_props/schema.json': ['test/fixtures/object_props/pass.json', 'test/fixtures/object_props/fail.json']
 				}
 			},
-			multi: {
+			fail_multi: {
 				options: {
-					multi:true
+					multi: true
 				},
 				files: {
 					'test/fixtures/object_props/schema.json': ['test/fixtures/object_props/fail.json']
@@ -44,8 +51,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-	grunt.registerTask('test', ['jshint', 'tv4']);
+	grunt.registerTask('default', ['dev']);
 
-	grunt.registerTask('default', ['test']);
+	grunt.registerTask('dev', ['jshint', 'tv4']);
+	grunt.registerTask('test', ['jshint', 'tv4:pass']);
+
 
 };
