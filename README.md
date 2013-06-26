@@ -32,8 +32,7 @@ grunt.initConfig({
   tv4: {
     //specify single schema's and multiple data to validate
     files: {
-      'schema/map_format.json': ['data/map_*.json', 'extra/map_*.json'],
-      'schema/lib_format.json': ['data/lib_*.json']
+      'schema/format.json': ['data/alpha.json', 'data/beta.json']
     }
   }
 })
@@ -45,18 +44,18 @@ grunt.initConfig({
 grunt.initConfig({
   tv4: {
     options: {
+      //show multiple errors per file
+      multi: true
       //pre register extra schemas by URI
       schemas: {
-        'http://example.com/schema/v1': {
-            'type': 'object'
-            //.. schema object
-        }
+        'http://example.com/schema/v1': grunt.file.readJSON('schema/v1.json'),
         'http://example.com/schema/v2': grunt.file.readJSON('schema/v2.json')
       }
     }
     files: {
-      'schema/map_format.json': ['data/map_*.json', 'extra/map_*.json'],
-      'schema/lib_format.json': ['data/lib_*.json']
+      //use glob and other standard selector options
+      'schema/map.json': ['data/map_*.json'],
+      'schema/library.json': ['**/lib_*.json']
     }
   }
 })
@@ -64,6 +63,7 @@ grunt.initConfig({
 
 ## History
 
+* 0.1.1 - Bugfixes and improved reporting
 * 0.1.0 - First release with synchronous validation
 
 
