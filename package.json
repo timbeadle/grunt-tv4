@@ -1,7 +1,7 @@
 {
   "name": "grunt-tv4",
   "description": "Use tv4 to validate files against json-schema draft v04",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/Bartvds/grunt-tv4",
   "author": {
     "name": "Bart van der Schoor",

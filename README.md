@@ -72,7 +72,7 @@ grunt.initConfig({
 
 ## History
 
-* 0.1.2 - Support for loading remote references (JSON Schema's `$ref`).
+* 0.1.3 - Support for loading remote references (JSON Schema's `$ref`).
 * 0.1.1 - Bugfixes and improved reporting
 * 0.1.0 - First release with synchronous validation
 
