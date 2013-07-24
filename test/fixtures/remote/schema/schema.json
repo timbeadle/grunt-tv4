@@ -1,4 +1,5 @@
 {
+	"id": "http://localhost:9090/remote/schema/schema.json",
 	"properties": {
 		"required" : ["alphaType"],
 		"alphaType": {

@@ -223,7 +223,7 @@ module.exports = function (grunt) {
 					context.tv4.addSchema(file.schemaSource, schema);
 
 					//pre fetch (saves a validation round)
-					loadSchemaList(context, context.tv4.getMissingUris(), function () {
+					loadSchemaList(context, context.tv4.getMissingUris(), function (err) {
 						if (err) {
 							return callback(err);
 						}
@@ -243,8 +243,16 @@ module.exports = function (grunt) {
 				return callback('not a file: '.red + file.schemaSource);
 			}
 			file.schema = grunt.file.readJSON(file.schemaSource);
-			//grunt.log.writeln('schema load: ' + f.dest);
-			recursiveTest(context, file, callback);
+			
+			context.tv4.addSchema(file.schema.id || "", file.schema);
+
+			//pre fetch (saves a validation round)
+			loadSchemaList(context, context.tv4.getMissingUris(), function (err) {
+				if (err) {
+					return callback(err);
+				}
+				recursiveTest(context, file, callback);
+			});
 		}
 	};
 
