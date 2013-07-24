@@ -1,0 +1,8 @@
+{
+	"properties": {
+		"required" : ["alphaType"],
+		"alphaType": {
+			"$ref": "http://localhost:9090/remote/schema/alpha.json"
+		}
+	}
+}

@@ -1,4 +1,4 @@
 {
-	"intKey": "what",
-	"stringKey": false
+	"intProp": "what",
+	"stringProp": false
 }

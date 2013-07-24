@@ -1,0 +1,8 @@
+{
+	"properties": {
+		"required" : ["betaType"],
+		"betaType": {
+			"$ref": "http://localhost:9090/remote/schema/beta.json"
+		}
+	}
+}
