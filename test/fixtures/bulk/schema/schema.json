@@ -1,0 +1,8 @@
+{
+	"properties": {
+		"required" : ["alphaType"],
+		"alphaType": {
+			"$ref": "alpha"
+		}
+	}
+}

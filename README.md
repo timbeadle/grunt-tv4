@@ -24,21 +24,28 @@ grunt.loadNpmTasks('grunt-tv4');
 ### Notes
 
 * Uses [Tiny Validator tv4 ](https://github.com/geraintluff/tv4) so schemas must conform to [json-schema draft v4](http://json-schema.org/documentation.html),
-* As of version 0.1.2 there is support for automatically loading remote references by URI. See the [JSON Schema](http://json-schema.org/) documentation on how to use `$ref`. 
+* Supports automatically resolution and loading remote references by http-URI. 
+* See the [JSON Schema](http://json-schema.org/) documentation on how to use `$ref`. 
+
+
+### API change 
+
+As of version `v0.2.0` the API was changed to follow the Grunt options- and file-selection conventions. The old pattern (which abused the destination-specifier) is no longer supported. The readme for the previous API can be found [here](https://github.com/Bartvds/grunt-tv4/tree/71ef1726945d05efd5daca29f26cbf4ab09c858e).
+
+The root schema must now to be specified as `options.root`.
 
 ### Default Options
 
 ```js
 grunt.initConfig({
-  tv4: {
-    myTarget: {
-      //specify single schemas and multiple data to validate
-      files: {
-        'schema/format.json': ['data/alpha.json', 'data/beta.json'],
-        'http://example.com/schema/v1': ['data/alpha.json', 'data/beta.json']
-      }
-    }
-  }
+	tv4: {
+		options: {
+		    root: grunt.file.readJSON('schema/main.json')
+		}
+		myTarget: {
+			src: ['data/*.json']
+		}
+	}
 })
 ```
 
@@ -46,51 +53,63 @@ grunt.initConfig({
 
 ```js
 grunt.initConfig({
-  tv4: {
-    //use global options
-    options: {
-      //show multiple errors per file (off by default)
-      multi: false,
-      //create a new tv4 instance for every target (off by default)
-      fresh: true,
-      //pre register extra schemas by URI
-      schemas: {
-        'http://example.com/schema/v1': grunt.file.readJSON('schema/v1.json'),
-        'http://example.com/schema/v2': grunt.file.readJSON('schema/v2.json')
-      },
-      //custom formats passed to tv4.addFormat()
-      formats: {
-        date: function (data, schema) {
-          if (typeof data !== 'string' || !dateRegex.test(data)) {
-            return 'value must be string of the form: YYYY-MM-DD';
-          }
-          return null;
-        }
-      },
-      //passed to tv4.validate()
-      checkRecursive: false
-      //passed to tv4.validate()
-      banUnknownProperties: false
-      //passed tv4.addLanguage() 
-      languages: {
-        'de': { ... }
-      }
-      //passed tv4.language() 
-      language: 'de'
-    },
-    myTarget: {
-      files: {
-        //use glob and other standard selector options
-        'schema/map.json': ['data/map_*.json'],
-        'http://example.com/schema/v1': ['**/lib_*.json']
-      }
-    }
-  }
+	tv4: {
+		options: {
+			// specify the main schema, one of:
+            // - path to json
+            // - http-url
+            // - schema object
+			root: grunt.file.readJSON('schema/main.json'),
+
+			// show multiple errors per file (off by default)
+			multi: true,
+
+			// create a new tv4 instance for every target (off by default)
+			fresh: true,
+
+			// add schemas in bulk (each required to have an 'id' property)
+			add: [
+				 grunt.file.readJSON('schema/apple.json'),
+				 grunt.file.readJSON('schema/pear.json')
+			],
+
+			// set schemas by URI
+			schemas: {
+				'http://example.com/schema/apple': grunt.file.readJSON('schema/apple.json'),
+				'http://example.com/schema/pear': grunt.file.readJSON('schema/pear.json')
+			},
+
+			// map of custom formats passed to tv4.addFormat()
+			formats: {
+				date: function (data, schema) {
+					if (typeof data !== 'string' || !dateRegex.test(data)) {
+						return 'value must be string of the form: YYYY-MM-DD';
+					}
+					return null;
+				}
+			},
+
+			// passed to tv4.validate()
+			checkRecursive: false
+			// passed to tv4.validate()
+			banUnknownProperties: false
+			// passed tv4.language()
+			language: 'de'
+			// passed tv4.addLanguage()
+			languages: {
+				'de': { ... }
+			}
+		},
+		myTarget: {
+			src: ['data/*.json']
+		}
+	}
 })
 ```
 
 ## History
 
+* 0.2.0 - Updated to follow the Grunt conventions.
 * 0.1.4 - Updated `tv4` to version `1.0.11` 
   * Added support for `tv4.addFormat()` / `languages` / `checkRecursive` / `banUnknownProperties`.
 * 0.1.3 - Support for loading remote references (JSON Schema's `$ref`).
