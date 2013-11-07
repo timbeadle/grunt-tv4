@@ -1,0 +1,8 @@
+{
+	"properties": {
+		"required" : ["dateProp"],
+		"dateProp": {
+			"format": "date"
+		}
+	}
+}

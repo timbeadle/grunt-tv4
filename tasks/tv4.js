@@ -67,7 +67,7 @@ module.exports = function (grunt) {
 				return callback('http schema at: ' + uri);
 			}
 			if (!res || !res.body) {
-				return callback('no rsponse at: '.red + uri);
+				return callback('no response at: '.red + uri);
 			}
 			if (res.statusCode < 200 || res.statusCode >= 400) {
 				return callback('http bad response code: ' + res.statusCode + ' on '.red + uri);
@@ -86,7 +86,6 @@ module.exports = function (grunt) {
 
 	//load and add batch of schema by uri, repeat until all missing are solved
 	var loadSchemaList = function (context, uris, callback) {
-
 		var step = function () {
 			if (uris.length === 0) {
 				return callback();
@@ -156,6 +155,7 @@ module.exports = function (grunt) {
 
 			grunt.log.writeln();
 			grunt.log.warn('tv4 ' + ('validated ' + context.pass.length).green + ', ' + ('failed ' + context.fail.length).red + ' of ' + context.fileCount + ' ' + pluralise('file', context.fileCount) + '\n');
+			grunt.log.writeln();
 			context.done(false);
 		}
 		else {
@@ -171,10 +171,10 @@ module.exports = function (grunt) {
 		grunt.log.writeln('test: ' + file.path);
 
 		if (context.options.multi) {
-			file.result = context.tv4.validateMultiple(file.data, file.schema);
+			file.result = context.tv4.validateMultiple(file.data, file.schema, context.options.checkRecursive, context.options.banUnknownProperties);
 		}
 		else {
-			file.result = context.tv4.validateResult(file.data, file.schema);
+			file.result = context.tv4.validateResult(file.data, file.schema, context.options.checkRecursive, context.options.banUnknownProperties);
 		}
 
 		if (!file.result.valid) {
@@ -271,7 +271,12 @@ module.exports = function (grunt) {
 			schemas: {},
 			timeout: 5000,
 			fresh: false,
-			multi: false
+			multi: false,
+			formats: {},
+			checkRecursive: false,
+			banUnknownProperties: false,
+			languages: {},
+			language: null
 		});
 
 		if (context.options.fresh) {
@@ -281,10 +286,23 @@ module.exports = function (grunt) {
 		grunt.util._.each(context.options.schemas, function (schema, uri) {
 			context.tv4.addSchema(uri, schema);
 		});
+		grunt.util._.each(context.options.formats, function (format, id) {
+			context.tv4.addFormat(id, format);
+		});
+		grunt.util._.each(context.options.languages, function (language, id) {
+			context.tv4.addLanguage(id, language);
+		});
+		if (context.options.language) {
+			context.tv4.language(context.options.language);
+		}
 
 		//flatten list for sanity
 		grunt.util._.each(this.files, function (f) {
 			grunt.util._.each(f.src, function (filePath) {
+				if (!grunt.file.exists(filePath)) {
+					grunt.log.warn('file "' + filePath + '" not found.');
+					return false;
+				}
 				context.fileCount++;
 				context.files.push({path: filePath, data: null, schema: null, schemaSource: f.dest});
 			});
@@ -293,6 +311,7 @@ module.exports = function (grunt) {
 		if (context.fileCount === 0) {
 			grunt.log.warn('zero input files selected');
 			context.done(false);
+			grunt.log.writeln();
 			return;
 		}
 
@@ -309,5 +328,4 @@ module.exports = function (grunt) {
 			});
 		});
 	});
-
 };

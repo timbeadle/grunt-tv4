@@ -9,13 +9,25 @@
 'use strict';
 
 module.exports = function (grunt) {
-
+	/*jshint unused:false*/
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-continue');
 
 	grunt.loadTasks('tasks');
+
+	var util = require('util');
+
+	var dateRegex = /^\d{4}-\d{1,2}-\d{1,2}$/;
+	var dateValidateCallback = function (data, schema) {
+		if (typeof data !== 'string' || !dateRegex.test(data)) {
+			// return error message
+			return 'value must be string of the form: YYYY-MM-DD';
+		}
+		return null;
+	};
 
 	grunt.initConfig({
 		jshint: {
@@ -78,7 +90,6 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'http://localhost:9090/remote/schema/non-existing.json': [
-						'http://localhost:9090/remote/pass.json',
 						'test/fixtures/remote/pass.json'
 					]
 				}
@@ -96,20 +107,47 @@ module.exports = function (grunt) {
 						'test/fixtures/remote/fail.json'
 					]
 				}
+			},
+			format_pass : {
+				options: {
+					fresh: true,
+					formats: {
+						'date': dateValidateCallback
+					}
+				},
+				files: {
+					'test/fixtures/format/schema.json': [
+						'test/fixtures/format/pass.json'
+					]
+				}
+			},
+			format_fail : {
+				options: {
+					fresh: true,
+					formats: {
+						'date': dateValidateCallback
+					}
+				},
+				files: {
+					'test/fixtures/format/schema.json': [
+						'test/fixtures/format/fail.json'
+					]
+				}
 			}
 		}
 	});
 
-	grunt.registerTask('default', ['test']);
+	//run twice for caching
+	grunt.registerTask('pass', ['tv4:pass', 'tv4:pass', 'tv4:format_pass']);
+	grunt.registerTask('fail', ['tv4:bad_single', 'tv4:bad_multi', 'tv4:remoteNotFound', 'tv4:remoteMixed', 'tv4:format_fail']);
 
-	grunt.registerTask('test', ['jshint', 'connect', 'tv4:pass', 'tv4:pass']);
+	grunt.registerTask('test', ['jshint', 'connect', 'pass', 'continueOn', 'fail', 'continueOff']);
 
 	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:remoteNotFound']);
-	grunt.registerTask('run', ['jshint', 'connect', 'tv4:bad_multi']);
 
-	grunt.registerTask('edit_01', ['jshint', 'connect', 'tv4:remoteNotFound']);
-	grunt.registerTask('edit_02', ['jshint', 'connect', 'tv4:remoteMixed']);
-	grunt.registerTask('edit_03', ['jshint', 'connect', 'tv4:bad_single']);
+	grunt.registerTask('run', ['fail']);
+	grunt.registerTask('default', ['test']);
+
 
 
 };
