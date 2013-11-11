@@ -316,9 +316,9 @@ module.exports = function (grunt) {
 		grunt.util._.each(context.options.schemas, function (schema, uri) {
 			context.tv4.addSchema(uri, schema);
 		});
-		grunt.util._.each(context.options.formats, function (format, id) {
-			context.tv4.addFormat(id, format);
-		});
+		
+		context.tv4.addFormat(context.options.formats);
+		
 		grunt.util._.each(context.options.languages, function (language, id) {
 			context.tv4.addLanguage(id, language);
 		});
