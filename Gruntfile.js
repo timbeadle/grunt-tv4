@@ -12,7 +12,6 @@ module.exports = function (grunt) {
 	/*jshint unused:false*/
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-continue');
 
@@ -209,11 +208,20 @@ module.exports = function (grunt) {
 			fail_subError: {
 				options: {
 					fresh: true,
-					multi: true,
 					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
 				},
 				src: [
 					'test/fixtures/subError/fail.json',
+					'test/fixtures/subError/fail_deeper.json',
+				]
+			},
+			fail_subErrorMulti: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
+				},
+				src: [
 					'test/fixtures/subError/fail_deeper.json',
 				]
 			}
@@ -236,6 +244,9 @@ module.exports = function (grunt) {
 			if (tv4[name]._twice) {
 				failNames.push('tv4:' + name);
 			}
+		}
+		else {
+			passNames.push('tv4:' + name);
 		}
 	});
 

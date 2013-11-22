@@ -133,9 +133,11 @@ module.exports = function (grunt) {
 				grunt.log.writeln(prefix + indent + '-> schema-path: ' + error.schemaPath);
 			}
 
-			grunt.util._.each(error.subErrors, function (sub) {
-				printError(sub, data, schema, indent, prefix + indent);
-			});
+			if (error.subErrors) {
+				grunt.util._.each(error.subErrors, function (sub) {
+					printError(sub, data, schema, indent, prefix + indent);
+				});
+			}
 		};
 
 		//got some failures: print log and fail the task
