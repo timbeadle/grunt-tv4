@@ -1,16 +1,16 @@
 {
+	"required": ["intProp", "stringProp", "shallowArray", "deepArray"],
 	"properties": {
-		"required": ["intProp", "stringProp", "shallowArray", "deepArray"],
 		"stringProp": {
 			"$ref": "#/definitions/multiType"
 		},
 		"intProp": {
 			"$ref": "#/definitions/multiType"
 		},
-		"shallowProp": {
+		"shallowArray": {
 			"$ref": "#/definitions/multiType"
 		},
-		"deepProp": {
+		"deepArray": {
 			"$ref": "#/definitions/multiType"
 		}
 	},
