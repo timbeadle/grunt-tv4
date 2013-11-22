@@ -109,6 +109,7 @@ grunt.initConfig({
 
 ## History
 
+* 0.2.1 - Added support to report subErrors (for anyOf/oneOf)
 * 0.2.0 - Updated to follow the Grunt conventions.
 * 0.1.4 - Updated `tv4` to version `1.0.11` 
   * Added support for `tv4.addFormat()` / `languages` / `checkRecursive` / `banUnknownProperties`.

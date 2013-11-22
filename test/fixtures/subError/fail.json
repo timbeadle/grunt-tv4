@@ -1,0 +1,21 @@
+{
+	"intProp": false,
+	"stringProp": null,
+	"shallowArray": [
+		false,
+		[
+			false
+		]
+	],
+	"deepArray": [
+		3,
+		"cc3",
+		false,
+		[
+			false,
+			[
+				false
+			]
+		]
+	]
+}

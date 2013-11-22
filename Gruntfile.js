@@ -196,6 +196,26 @@ module.exports = function (grunt) {
 				src: [
 					'test/fixtures/bulk/fail.json'
 				]
+			},
+			pass_subError: {
+				options: {
+					fresh: true,
+					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
+				},
+				src: [
+					'test/fixtures/subError/pass.json'
+				]
+			},
+			fail_subError: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
+				},
+				src: [
+					'test/fixtures/subError/fail.json',
+					'test/fixtures/subError/fail_deeper.json',
+				]
 			}
 		}
 	});

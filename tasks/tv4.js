@@ -20,7 +20,9 @@ module.exports = function (grunt) {
 		return t;
 	}
 
-	function valueStrim(value) {
+	function valueStrim(value, limit) {
+		limit = (typeof limit !== 'undefined' ? limit : 80);
+
 		var t = typeof value;
 		if (t === 'function') {
 			return '[function]';
@@ -28,14 +30,14 @@ module.exports = function (grunt) {
 		if (t === 'object') {
 			//return Object.prototype.toString.call(value);
 			value = JSON.stringify(value);
-			if (value.length > 40) {
-				value = value.substr(0, 37) + '...';
+			if (value.length > limit) {
+				value = value.substr(0, limit - 3) + '...';
 			}
 			return value;
 		}
 		if (t === 'string') {
-			if (value.length > 40) {
-				return JSON.stringify(value.substr(0, 37)) + '...';
+			if (value.length > limit) {
+				return JSON.stringify(value.substr(0, limit - 3)) + '...';
 			}
 			return JSON.stringify(value);
 		}
@@ -49,7 +51,6 @@ module.exports = function (grunt) {
 		return str + 's';
 	}
 
-	//TODO decide to tv4 outside task for inter-target caching?
 	var taskTv4 = require('tv4').tv4.freshApi();
 	var jsonpointer = require('jsonpointer.js');
 	var request = require('request');
@@ -115,23 +116,26 @@ module.exports = function (grunt) {
 		}
 
 		//subroutine
-		var printError = function (error, data, schema, indent) {
+		var printError = function (error, data, schema, indent, prefix) {
 			var value = jsonpointer.get(data, error.dataPath);
 			var schemaValue = jsonpointer.get(schema, error.schemaPath);
 
-			grunt.log.writeln(indent + error.message.yellow);
-			grunt.log.writeln(indent + indent + error.dataPath);
-			grunt.log.writeln(indent + indent + '-> value: ' + valueType(value) + ' -> ' + valueStrim(value));
+			prefix = (typeof prefix !== 'undefined' ? prefix : indent);
+
+			grunt.log.writeln(prefix + error.message.yellow);
+			grunt.log.writeln(prefix + indent + error.dataPath);
+			grunt.log.writeln(prefix + indent + '-> value: ' + valueType(value) + ' -> ' + valueStrim(value));
+
 			if (typeof schemaValue !== 'undefined') {
-				grunt.log.writeln(indent + indent + '-> schema: ' + schemaValue + ' -> ' + error.schemaPath);
+				grunt.log.writeln(prefix + indent + '-> schema: ' + schemaValue + ' -> ' + error.schemaPath);
 			}
 			else {
-				grunt.log.writeln(indent + indent + '-> schema-path: ' + error.schemaPath);
+				grunt.log.writeln(prefix + indent + '-> schema-path: ' + error.schemaPath);
 			}
-			//untested
-			/*grunt.util._.each(error.subErrors, function (error) {
-			 printError(error, data, schema, indent + indent + indent + indent);
-			 });*/
+
+			grunt.util._.each(error.subErrors, function (sub) {
+				printError(sub, data, schema, indent, prefix + indent);
+			});
 		};
 
 		//got some failures: print log and fail the task
@@ -157,7 +161,7 @@ module.exports = function (grunt) {
 					});
 				}
 				else if (file.result.error) {
-					printError(file.result.error, file.data, file.schema, '  ');
+					printError(file.result.error, file.data, file.schema, '   ');
 				}
 				if (file.result.missing.length > 0) {
 					grunt.log.writeln('missing schemas: '.yellow);
@@ -316,9 +320,9 @@ module.exports = function (grunt) {
 		grunt.util._.each(context.options.schemas, function (schema, uri) {
 			context.tv4.addSchema(uri, schema);
 		});
-		
+
 		context.tv4.addFormat(context.options.formats);
-		
+
 		grunt.util._.each(context.options.languages, function (language, id) {
 			context.tv4.addLanguage(id, language);
 		});
@@ -328,10 +332,10 @@ module.exports = function (grunt) {
 
 		//flatten list for sanity
 		grunt.util._.each(this.files, function (f) {
-			grunt.util._.each(f.src, function (filePath) {
+			grunt.util._.some(f.src, function (filePath) {
 				if (!grunt.file.exists(filePath)) {
 					grunt.log.warn('file "' + filePath + '" not found.');
-					return false;
+					return true;
 				}
 				context.fileCount++;
 				context.files.push({path: filePath, data: null, schema: null, root: context.options.root});
@@ -346,7 +350,7 @@ module.exports = function (grunt) {
 		}
 
 		if (context.options.add && Array.isArray(context.options.add)) {
-			grunt.util._.each(context.options.add, function (schema) {
+			grunt.util._.some(context.options.add, function (schema) {
 				if (typeof schema === 'string') {
 					//juggle
 					schema = grunt.file.readJSON(schema);
@@ -355,7 +359,7 @@ module.exports = function (grunt) {
 					grunt.log.warn('options.add: schema missing required id field (use options.schema to map it manually)');
 					grunt.log.writeln();
 					context.done(false);
-					return false;
+					return true;
 				}
 				context.tv4.addSchema(schema.id, schema);
 			});
