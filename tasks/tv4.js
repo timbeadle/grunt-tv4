@@ -189,10 +189,10 @@ module.exports = function (grunt) {
 		reporter.reportBulk(gruntOut, context.fail, context.pass);
 
 		if (context.fail.length === 0) {
-			grunt.log.writeln();
 			context.done(true);
 		}
 		else {
+			grunt.log.writeln();
 			context.done(false);
 		}
 	}
