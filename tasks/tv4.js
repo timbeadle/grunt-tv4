@@ -70,21 +70,6 @@ module.exports = function (grunt) {
 		step();
 	}
 
-	//print all results and finish task
-	function finaliseTask(err, context) {
-		if (err) {
-			grunt.log.writeln();
-			grunt.log.warn('error: '.red + err);
-			grunt.log.writeln();
-			context.done(false);
-			return;
-		}
-		grunt.log.writeln();
-		reporter.reportBulk(gruntOut, context.fail, context.pass);
-
-		context.done((context.fail.length === 0));
-	}
-
 	//supports automatic lazy loading
 	function recursiveTest(context, file, callback) {
 
@@ -187,6 +172,28 @@ module.exports = function (grunt) {
 
 				startLoading(context, file, callback);
 			}
+		}
+	}
+
+	//print all results and finish task
+	function finaliseTask(err, context) {
+		if (err) {
+			grunt.log.writeln();
+			grunt.log.warn('error: '.red + err);
+			grunt.log.writeln();
+			context.done(false);
+			return;
+		}
+		grunt.log.writeln();
+
+		reporter.reportBulk(gruntOut, context.fail, context.pass);
+
+		if (context.fail.length === 0) {
+			grunt.log.writeln();
+			context.done(true);
+		}
+		else {
+			context.done(false);
 		}
 	}
 
