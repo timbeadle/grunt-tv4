@@ -17,6 +17,8 @@
 		"describe": true,
 		"it": true,
 		"tv4": true,
+		"define": true,
+		"chai": true,
 		"assert": true
 	}
 }

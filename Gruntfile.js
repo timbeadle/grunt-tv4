@@ -31,12 +31,13 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		jshint: {
-			options: {
-				jshintrc: '.jshintrc'
-			},
+			options: grunt.util._.defaults(grunt.file.readJSON('.jshintrc'), {
+				reporter: './node_modules/jshint-path-reporter'
+			}),
 			all: [
 				'Gruntfile.js',
-				'tasks/*.js'
+				'lib/**/*.js',
+				'tasks/**/*.js'
 			]
 		},
 		connect: {
@@ -256,6 +257,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('test', ['jshint', 'connect', 'pass', 'continueOn', 'fail', 'continueOff']);
 
 	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:remoteNotFound']);
+	grunt.registerTask('edit_01', ['jshint', 'tv4:fail_subErrorMulti']);
 
 	grunt.registerTask('run', ['fail']);
 	grunt.registerTask('default', ['test']);
