@@ -8,172 +8,20 @@
 
 'use strict';
 
-var taskTv4 = require('tv4').tv4.freshApi();
-var request = require('request');
-var reporter = require('../lib/reporter');
+var taskTv4 = require('tv4').freshApi();
+var reporter = require('tv4-reporter');
+var loader = require('../lib/loader').getLoaders();
+var runner = require('../lib/runner');
 
 module.exports = function (grunt) {
 
+	// modify adapter
 	var gruntOut = reporter.getColorsJSOut();
 	gruntOut.writeln = function (str) {
 		if (arguments.length > 0) {
 			grunt.log.writeln(str);
 		}
 	};
-
-	//load a single schema by uri
-	function loadSchemaFile(context, uri, callback) {
-		if (!/^https?:/.test(uri)) {
-			callback('not a http uri: ' + uri);
-		}
-		grunt.log.writeln('load: ' + uri);
-
-		request.get({url: uri, timeout: context.options.timeout}, function (err, res) {
-			//grunt.log.writeln('done: ' + uri);
-			if (err) {
-				return callback('http schema at: ' + uri);
-			}
-			if (!res || !res.body) {
-				return callback('no response at: '.red + uri);
-			}
-			if (res.statusCode < 200 || res.statusCode >= 400) {
-				return callback('http bad response code: ' + res.statusCode + ' on '.red + uri);
-			}
-
-			var schema;
-			try {
-				schema = JSON.parse(res.body);
-			}
-			catch (e) {
-				return callback('invalid json at: '.red + uri + ':\n' + e + '\n' + res.body);
-			}
-			callback(null, schema);
-		});
-	}
-
-	//load and add batch of schema by uri, repeat until all missing are solved
-	function loadSchemaList(context, uris, callback) {
-		var step = function () {
-			if (uris.length === 0) {
-				return callback();
-			}
-			var uri = uris[0];
-			loadSchemaFile(context, uri, function (err, schema) {
-				if (err) {
-					return callback(err);
-				}
-				context.tv4.addSchema(uri, schema);
-				uris = context.tv4.getMissingUris();
-				step();
-			});
-		};
-		step();
-	}
-
-	//supports automatic lazy loading
-	function recursiveTest(context, file, callback) {
-
-		grunt.log.writeln('test: ' + file.path);
-
-		if (context.options.multi) {
-			file.result = context.tv4.validateMultiple(file.data, file.schema, context.options.checkRecursive, context.options.banUnknownProperties);
-		}
-		else {
-			file.result = context.tv4.validateResult(file.data, file.schema, context.options.checkRecursive, context.options.banUnknownProperties);
-		}
-
-		if (!file.result.valid) {
-			context.fail.push(file);
-			grunt.log.writeln('fail: '.red + file.path);
-			return callback();
-		}
-		if (file.result.missing.length === 0) {
-			context.pass.push(file);
-			grunt.log.writeln('pass: '.green + file.path);
-			return callback();
-		}
-		loadSchemaList(context, file.result.missing, function (err) {
-			if (err) {
-				return callback(err);
-			}
-			//check again
-			recursiveTest(context, file, callback);
-		});
-	}
-
-	function startLoading(context, file, callback) {
-		//pre fetch (saves a validation round)
-		loadSchemaList(context, context.tv4.getMissingUris(), function (err) {
-			if (err) {
-				return callback(err);
-			}
-			recursiveTest(context, file, callback);
-		});
-	}
-
-	//validate single file
-	function validateFile(context, file, callback) {
-
-		grunt.log.writeln('-> ' + file.path.cyan);
-
-		file.data = grunt.file.readJSON(file.path);
-
-		if (!context.options.root) {
-			grunt.log.warn('no explicit root schema');
-			grunt.log.writeln();
-			context.done(false);
-		}
-		else if (typeof context.options.root === 'object') {
-			if (!Array.isArray(context.options.root)) {
-				file.schema = context.options.root;
-				context.tv4.addSchema((file.schema.id || ''), file.schema);
-
-				startLoading(context, file, callback);
-			}
-			//TODO support loops?
-		}
-		else if (typeof context.options.root === 'string') {
-			if (/^https?:/.test(file.root)) {
-
-				grunt.log.writeln('http: ' + file.root);
-
-				//known from previous sessions?
-				var schema = context.tv4.getSchema(file.root);
-				if (schema) {
-					grunt.log.writeln('have: ' + file.root);
-					file.schema = schema;
-
-					recursiveTest(context, file, callback);
-				}
-				else {
-					loadSchemaFile(context, file.root, function (err, schema) {
-						if (err) {
-							return callback(err);
-						}
-						file.schema = schema;
-						context.tv4.addSchema(file.root, schema);
-
-						startLoading(context, file, callback);
-					});
-				}
-			}
-			else {
-				grunt.log.writeln('file: ' + file.root);
-
-				if (!grunt.file.exists(file.root)) {
-					return callback('not found: '.red + file.root);
-				}
-				if (!grunt.file.isFile(file.root)) {
-					return callback('not a file: '.red + file.root);
-				}
-				file.schema = grunt.file.readJSON(file.root);
-
-				context.tv4.addSchema(file.schema.id || '', file.schema);
-
-				startLoading(context, file, callback);
-			}
-		}
-	}
 
 	//print all results and finish task
 	function finaliseTask(err, context) {
@@ -197,44 +45,40 @@ module.exports = function (grunt) {
 		}
 	}
 
+	var runner = runner.getRunner(gruntOut, taskTv4, grunt, loader, reporter);
+
 	grunt.registerMultiTask('tv4', 'Validate values against json-schema v4.', function () {
-		var context = {};
-		context.done = this.async();
-		context.fail = [];
-		context.pass = [];
-		context.files = [];
-		context.tv4 = taskTv4;
 
 		//import options
-		context.options = this.options({
+		runner.options = this.options(runner.getDefault(), {
 			schemas: {},
 			root: null,
-			timeout: 5000,
-			fresh: false,
-			multi: false,
-			formats: {},
+				timeout: 5000,
+				fresh: false,
+				multi: false,
+				formats: {},
 			add: [],
-			checkRecursive: false,
-			banUnknownProperties: false,
-			languages: {},
+				checkRecursive: false,
+				banUnknownProperties: false,
+				languages: {},
 			language: null
 		});
 
-		if (context.options.fresh) {
-			context.tv4 = taskTv4.freshApi();
+		if (runner.options.fresh) {
+			runner.tv4 = taskTv4.freshApi();
 		}
 
-		grunt.util._.each(context.options.schemas, function (schema, uri) {
-			context.tv4.addSchema(uri, schema);
+		grunt.util._.each(runner.options.schemas, function (schema, uri) {
+			runner.tv4.addSchema(uri, schema);
 		});
 
-		context.tv4.addFormat(context.options.formats);
+		runner.tv4.addFormat(runner.options.formats);
 
-		grunt.util._.each(context.options.languages, function (language, id) {
-			context.tv4.addLanguage(id, language);
+		grunt.util._.each(runner.options.languages, function (language, id) {
+			runner.tv4.addLanguage(id, language);
 		});
-		if (context.options.language) {
-			context.tv4.language(context.options.language);
+		if (runner.options.language) {
+			runner.tv4.language(runner.options.language);
 		}
 
 		//flatten list for sanity
@@ -244,37 +88,39 @@ module.exports = function (grunt) {
 					grunt.log.warn('file "' + filePath + '" not found.');
 					return true;
 				}
-				context.files.push({
+				runner.objects.push({
 					path: filePath,
 					label: filePath,
-					data: null,
-					schema: null,
-					root: context.options.root
+					root: runner.options.root
 				});
 			});
 		});
 
-		if (context.options.values) {
-			var keyPrefix = (Array.isArray(context.options.values) ? 'value #' : '');
-			grunt.util._.some(context.options.values, function (value, key) {
-				context.files.push({
+		var values = this.data.values;
+		if (typeof values === 'function') {
+			values = values();
+		}
+
+		if (typeof values === 'object') {
+			var keyPrefix = (Array.isArray(values) ? 'value #' : '');
+			grunt.util._.some(values, function (value, key) {
+				runner.objects.push({
 					label: keyPrefix + key,
-					data: value,
-					schema: null,
-					root: context.options.root
+					value: value,
+					root: runner.options.root
 				});
 			});
 		}
 
-		if (context.files.length === 0) {
-			grunt.log.warn('zero input files selected');
+		if (runner.objects.length === 0) {
+			grunt.log.warn('zero input objects selected');
 			grunt.log.writeln();
-			context.done(false);
+			runner.done(false);
 			return;
 		}
 
-		if (context.options.add && Array.isArray(context.options.add)) {
-			grunt.util._.some(context.options.add, function (schema) {
+		if (runner.options.add && Array.isArray(runner.options.add)) {
+			grunt.util._.some(runner.options.add, function (schema) {
 				if (typeof schema === 'string') {
 					//juggle
 					schema = grunt.file.readJSON(schema);
@@ -282,24 +128,13 @@ module.exports = function (grunt) {
 				if (typeof schema.id === 'undefined') {
 					grunt.log.warn('options.add: schema missing required id field (use options.schema to map it manually)');
 					grunt.log.writeln();
-					context.done(false);
+					runner.done(false);
 					return true;
 				}
-				context.tv4.addSchema(schema.id, schema);
+				runner.tv4.addSchema(schema.id, schema);
 			});
 		}
 
-		//start the flow
-		loadSchemaList(context, context.tv4.getMissingUris(), function (err) {
-			if (err) {
-				return finaliseTask(err, context);
-			}
-			grunt.util.async.forEachSeries(context.files, function (file, callback) {
-				validateFile(context, file, callback);
-
-			}, function (err) {
-				finaliseTask(err, context);
-			});
-		});
+		runner.run(this.async());
 	});
 };

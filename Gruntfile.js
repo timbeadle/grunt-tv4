@@ -225,6 +225,60 @@ module.exports = function (grunt) {
 				src: [
 					'test/fixtures/subError/fail_deeper.json',
 				]
+			},
+			pass_values: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: {
+						type: 'string'
+					},
+					values: [
+						'valueAlpha',
+						'valueBravo'
+					]
+				}
+			},
+			fail_valuesArray: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: {
+						type: 'string'
+					},
+					values: [
+						false,
+						123
+					]
+				}
+			},
+			fail_valuesObject: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: {
+						type: 'string'
+					},
+					values: {
+						'myBoolenaValue': false,
+						'myNumberValue': 1
+					}
+				}
+			},
+			fail_valuesCallback: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: {
+						type: 'string'
+					},
+					values: function() {
+						return {
+							'callbackBoolean': false,
+							'callbackNumber': 1
+						};
+					}
+				}
 			}
 		}
 	});
@@ -233,6 +287,7 @@ module.exports = function (grunt) {
 	var passNames = [];
 	var failNames = [];
 	var tv4 = grunt.config.get('tv4');
+
 	Object.keys(tv4).forEach(function (name) {
 		if (/^pass_/.test(name)) {
 			passNames.push('tv4:' + name);
@@ -258,6 +313,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:remoteNotFound']);
 	grunt.registerTask('edit_01', ['jshint', 'tv4:fail_subErrorMulti']);
+	grunt.registerTask('edit_02', ['jshint', 'tv4:pass_values', 'tv4:fail_valuesArray', 'tv4:fail_valuesObject', 'tv4:fail_valuesCallback']);
 
 	grunt.registerTask('run', ['fail']);
 	grunt.registerTask('default', ['test']);

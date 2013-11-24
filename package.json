@@ -37,7 +37,8 @@
   "dependencies": {
     "jsonpointer.js": "0.3.0",
     "request": "2.25.0",
-    "tv4": "~1.0.11"
+    "tv4": "~1.0.11",
+    "tv4-reporter": "git://github.com/Bartvds/tv4-reporter/#cc365f6b6b85bb70e7df64f201a7afbd0abf30d3"
   },
   "devDependencies": {
     "grunt-cli": "~0.1",
