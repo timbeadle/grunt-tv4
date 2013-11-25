@@ -1,4 +1,5 @@
 {
+	"type": "object",
 	"required": ["intProp", "stringProp", "shallowArray", "deepArray"],
 	"properties": {
 		"stringProp": {

@@ -1,7 +1,8 @@
 {
 	"id": "http://localhost:9090/remote/schema/schema.json",
+	"type": "object",
+	"required" : ["alphaType"],
 	"properties": {
-		"required" : ["alphaType"],
 		"alphaType": {
 			"$ref": "http://localhost:9090/remote/schema/alpha.json"
 		}

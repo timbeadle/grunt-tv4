@@ -1,6 +1,8 @@
 {
+	"id": "object_props",
+	"type": "object",
+	"required" : ["intProp", "stringProp"],
 	"properties": {
-		"required" : ["intProp", "stringProp"],
 		"intProp": {
 			"type": "integer"
 		},

@@ -1,8 +1,33 @@
 {
+	"type": "object",
+	"required": ["alphaType"],
 	"properties": {
-		"required" : ["alphaType"],
 		"alphaType": {
-			"$ref": "alpha"
+			"$ref": "#/definitions/alpha"
+		}
+	},
+	"definitions": {
+		"alpha": {
+			"type": "object",
+			"required": ["betaType"],
+			"properties": {
+				"required": ["betaType"],
+				"betaType": {
+					"$ref": "#/definitions/beta"
+				}
+			}
+		},
+		"beta": {
+			"type": "object",
+			"required": ["intProp", "stringProp"],
+			"properties": {
+				"intProp": {
+					"type": "integer"
+				},
+				"stringProp": {
+					"type": "string"
+				}
+			}
 		}
 	}
 }

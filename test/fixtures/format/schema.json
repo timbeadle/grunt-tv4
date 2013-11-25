@@ -1,6 +1,8 @@
 {
+	"id" : "formatSchema",
+	"type": "object",
+	"required" : ["dateProp"],
 	"properties": {
-		"required" : ["dateProp"],
 		"dateProp": {
 			"format": "date"
 		}
