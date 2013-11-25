@@ -232,12 +232,12 @@ module.exports = function (grunt) {
 					multi: true,
 					root: {
 						type: 'string'
-					},
-					values: [
-						'valueAlpha',
-						'valueBravo'
-					]
-				}
+					}
+				},
+				values: [
+					'valueAlpha',
+					'valueBravo'
+				]
 			},
 			fail_valuesArray: {
 				options: {
@@ -245,12 +245,12 @@ module.exports = function (grunt) {
 					multi: true,
 					root: {
 						type: 'string'
-					},
-					values: [
-						false,
-						123
-					]
-				}
+					}
+				},
+				values: [
+					false,
+					123
+				]
 			},
 			fail_valuesObject: {
 				options: {
@@ -258,11 +258,11 @@ module.exports = function (grunt) {
 					multi: true,
 					root: {
 						type: 'string'
-					},
-					values: {
-						'myBoolenaValue': false,
-						'myNumberValue': 1
 					}
+				},
+				values: {
+					'myBoolenaValue': false,
+					'myNumberValue': 1
 				}
 			},
 			fail_valuesCallback: {
@@ -271,13 +271,13 @@ module.exports = function (grunt) {
 					multi: true,
 					root: {
 						type: 'string'
-					},
-					values: function() {
-						return {
-							'callbackBoolean': false,
-							'callbackNumber': 1
-						};
 					}
+				},
+				values: function () {
+					return {
+						'callbackBoolean': false,
+						'callbackNumber': 1
+					};
 				}
 			}
 		}

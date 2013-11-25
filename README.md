@@ -38,6 +38,7 @@ The root schema must now to be specified as `options.root`.
 
 ### Default Options
 
+Validate .json files:
 ```js
 grunt.initConfig({
 	tv4: {
@@ -51,20 +52,19 @@ grunt.initConfig({
 })
 ```
 
+Valdiate values:
 ```js
 grunt.initConfig({
 	tv4: {
 		myTarget: {
-		    root: {
-				type: 'string'
-			}
 			options: {
-				values: [
-					'yes'
-					false,
-				]
+				//..
 			}
-		}
+		},
+		values: [
+			{ ... },
+			{ ... }
+		]
 	}
 })
 ````
@@ -109,26 +109,6 @@ grunt.initConfig({
 				}
 			},
 
-			// validate values
-			values: [
-				grunt.file.readJSON('schema/apple.json'),
-				grunt.file.readJSON('schema/pear.json')
-			],
-
-			// alternately pass as object and the keys will be used as labels in the reports
-			values: {
-				'first': grunt.file.readJSON('schema/apple.json'),
-				'second': grunt.file.readJSON('schema/pear.json')
-			},
-
-			// alternately pass a function() to returns the values (array or object)
-			values: function() {
-				return {
-					'first': grunt.file.readJSON('schema/apple.json'),
-					'second': grunt.file.readJSON('schema/pear.json')
-				}
-			},
-
 			// passed to tv4.validate()
 			checkRecursive: false
 			// passed to tv4.validate()
@@ -142,7 +122,26 @@ grunt.initConfig({
 		},
 		// load json from disk
 		myTarget: {
-			src: ['data/*.json']
+			src: ['data/*.json', 'data/many.json']
+		},
+		// validate values
+		values: [
+			grunt.file.readJSON('schema/apple.json'),
+			grunt.file.readJSON('schema/pear.json')
+		],
+
+		// alternately pass as object and the keys will be used as labels in the reports
+		values: {
+			'first': grunt.file.readJSON('schema/apple.json'),
+			'second': grunt.file.readJSON('schema/pear.json')
+		},
+
+		// alternately pass a function() to returns a collection of values (array or object)
+		values: function() {
+			return {
+				'first': grunt.file.readJSON('schema/apple.json'),
+				'second': grunt.file.readJSON('schema/pear.json')
+			}
 		}
 	}
 })
@@ -150,6 +149,10 @@ grunt.initConfig({
 
 ## History
 
+* 0.3.0 - Added `.values` option. Refactored to use modular components:
+	* Extracted error and summary formatting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter) and [miniwrite](https://github.com/Bartvds/miniwrite)
+	* Moved loader logic to own stand-alone module (for later extraction)
+	* Extracted test running logic to own module (for layer extraction)
 * 0.2.1 - Added support to report subErrors (for anyOf/oneOf)
 * 0.2.0 - Updated to follow the Grunt conventions.
 * 0.1.4 - Updated `tv4` to version `1.0.11` 

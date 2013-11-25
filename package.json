@@ -1,7 +1,7 @@
 {
   "name": "grunt-tv4",
   "description": "Validate values against json-schema v4",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "homepage": "https://github.com/Bartvds/grunt-tv4",
   "author": {
     "name": "Bart van der Schoor",
@@ -38,7 +38,8 @@
     "jsonpointer.js": "0.3.0",
     "request": "2.25.0",
     "tv4": "~1.0.11",
-    "tv4-reporter": "git://github.com/Bartvds/tv4-reporter/#cc365f6b6b85bb70e7df64f201a7afbd0abf30d3"
+    "miniwrite": "git://github.com/Bartvds/miniwrite/#00ca8f7fd73946d249740e9f793715cf6c5a049b",
+    "tv4-reporter": "git://github.com/Bartvds/tv4-reporter/#09ac4b50ae2a300031e710d1cd41cd0fa5e3ecb3"
   },
   "devDependencies": {
     "grunt-cli": "~0.1",
