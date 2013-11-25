@@ -56,7 +56,18 @@ module.exports = function (grunt) {
 					root: 'test/fixtures/object_props/schema.json'
 				},
 				src: [
-					'test/fixtures/object_props/pass.json'
+					'test/fixtures/object_props/pass_a.json'
+				]
+			},
+			pass_many: {
+				options: {
+					fresh: true,
+					root: 'test/fixtures/object_props/schema.json'
+				},
+				src: [
+					'test/fixtures/object_props/pass_a.json',
+					'test/fixtures/object_props/pass_b.json',
+					'test/fixtures/object_props/pass_c.json'
 				]
 			},
 			pass_remote: {
@@ -87,8 +98,8 @@ module.exports = function (grunt) {
 					root: 'test/fixtures/object_props/schema.json'
 				},
 				src: [
-					'test/fixtures/object_props/pass.json',
-					'test/fixtures/object_props/fail.json'
+					'test/fixtures/object_props/pass_a.json',
+					'test/fixtures/object_props/fail_a.json'
 				]
 			},
 			fail_multi: {
@@ -98,7 +109,19 @@ module.exports = function (grunt) {
 					root: 'test/fixtures/object_props/schema.json'
 				},
 				src: [
-					'test/fixtures/object_props/fail.json'
+					'test/fixtures/object_props/fail_a.json'
+				]
+			},
+			fail_many_multi: {
+				options: {
+					fresh: true,
+					multi: true,
+					root: 'test/fixtures/object_props/schema.json'
+				},
+				src: [
+					'test/fixtures/object_props/fail_a.json',
+					'test/fixtures/object_props/fail_b.json',
+					'test/fixtures/object_props/fail_c.json'
 				]
 			},
 			fail_remote: {
@@ -261,7 +284,7 @@ module.exports = function (grunt) {
 					}
 				},
 				values: {
-					'myBoolenaValue': false,
+					'myBooleanValue': false,
 					'myNumberValue': 1
 				}
 			},
@@ -311,7 +334,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('test', ['jshint', 'connect', 'pass', 'continueOn', 'fail', 'continueOff']);
 
-	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:remoteNotFound']);
+	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:fail_many_multi']);
 	grunt.registerTask('edit_01', ['jshint', 'tv4:fail_subErrorMulti']);
 	grunt.registerTask('edit_02', ['jshint', 'tv4:pass_values', 'tv4:fail_valuesArray', 'tv4:fail_valuesObject', 'tv4:fail_valuesCallback']);
 

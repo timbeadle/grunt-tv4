@@ -8,7 +8,6 @@
 
 'use strict';
 
-
 var taskTv4 = require('tv4').freshApi();
 var reporter = require('tv4-reporter');
 //TODO externalise
@@ -16,7 +15,7 @@ var output = require('miniwrite');
 var loader = require('../lib/loader');
 var runnerModule = require('../lib/runner');
 
-//var util = require('util');
+var util = require('util');
 
 module.exports = function (grunt) {
 
@@ -100,6 +99,8 @@ module.exports = function (grunt) {
 		}
 
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+		grunt.verbose.writeln(util.inspect(context));
 
 
 		context.run(function(err, success) {

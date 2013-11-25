@@ -36,9 +36,14 @@ As of version `v0.2.0` the API was changed to follow the Grunt options- and file
 
 The root schema must now to be specified as `options.root`.
 
-### Default Options
+### Example
 
-Validate .json files:
+* Demo of version `v0.3.0` output on [travis-ci](https://travis-ci.org/Bartvds/grunt-tv4/jobs/14468920)
+
+### Basic usage
+
+Validate from .json files:
+
 ```js
 grunt.initConfig({
 	tv4: {
@@ -53,23 +58,27 @@ grunt.initConfig({
 ```
 
 Valdiate values:
+
 ```js
 grunt.initConfig({
 	tv4: {
 		myTarget: {
 			options: {
-				//..
-			}
-		},
-		values: [
-			{ ... },
-			{ ... }
-		]
+				root: {
+					type: 'object',
+					properties: { ... }
+				}
+			},
+			values: [
+				{ ... },
+				{ ... }
+			]
+		}
 	}
 })
 ````
 
-### Advanced Options
+### Advanced usage
 
 ```js
 grunt.initConfig({
@@ -121,26 +130,33 @@ grunt.initConfig({
 			}
 		},
 		// load json from disk
-		myTarget: {
-			src: ['data/*.json', 'data/many.json']
-		},
-		// validate values
-		values: [
-			grunt.file.readJSON('schema/apple.json'),
-			grunt.file.readJSON('schema/pear.json')
-		],
-
-		// alternately pass as object and the keys will be used as labels in the reports
-		values: {
-			'first': grunt.file.readJSON('schema/apple.json'),
-			'second': grunt.file.readJSON('schema/pear.json')
+		myFiles: {
+			src: ['data/*.json', 'data/fruit/**/*.json']
 		},
 
-		// alternately pass a function() to returns a collection of values (array or object)
-		values: function() {
-			return {
-				'first': grunt.file.readJSON('schema/apple.json'),
-				'second': grunt.file.readJSON('schema/pear.json')
+		myValues: {
+			// validate values
+			values: [
+				grunt.file.readJSON('data/apple.json'),
+				grunt.file.readJSON('data/pear.json')
+			],
+		},
+
+		myValueMap: {
+			// alternately pass as object and the keys will be used as labels in the reports
+			values: {
+				'apple': grunt.file.readJSON('data/apple.json'),
+				'pear': grunt.file.readJSON('data/pear.json')
+			},
+		},
+
+		myCallback: {
+			// alternately pass a function() to returns a collection of values (array or object)
+			values: function() {
+				return {
+					'apple': grunt.file.readJSON('data/apple.json'),
+					'pear': grunt.file.readJSON('data/pear.json')
+				}
 			}
 		}
 	}
