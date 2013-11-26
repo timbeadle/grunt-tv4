@@ -309,18 +309,18 @@ module.exports = function (grunt) {
 	//used by format checker
 	var passNames = [];
 	var failNames = [];
-	var tv4 = grunt.config.get('tv4');
+	var conf = grunt.config.get('tv4');
 
-	Object.keys(tv4).forEach(function (name) {
+	Object.keys(conf).sort().forEach(function (name) {
 		if (/^pass_/.test(name)) {
 			passNames.push('tv4:' + name);
-			if (tv4[name]._twice) {
+			if (conf[name]._twice) {
 				passNames.push('tv4:' + name);
 			}
 		}
 		else if (/^fail_/.test(name)) {
 			failNames.push('tv4:' + name);
-			if (tv4[name]._twice) {
+			if (conf[name]._twice) {
 				failNames.push('tv4:' + name);
 			}
 		}
