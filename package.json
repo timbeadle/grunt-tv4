@@ -38,7 +38,8 @@
     "jsonpointer.js": "0.3.0",
     "request": "2.25.0",
     "tv4": "~1.0.11",
-    "miniwrite": "git://github.com/Bartvds/miniwrite/#00ca8f7fd73946d249740e9f793715cf6c5a049b",
+    "ministyle": "git://github.com/Bartvds/ministyle/#master",
+    "miniwrite": "git://github.com/Bartvds/miniwrite/#master",
     "tv4-reporter": "git://github.com/Bartvds/tv4-reporter/#09ac4b50ae2a300031e710d1cd41cd0fa5e3ecb3"
   },
   "devDependencies": {

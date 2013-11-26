@@ -10,29 +10,34 @@
 
 var taskTv4 = require('tv4').freshApi();
 var reporter = require('tv4-reporter');
-//TODO externalise
-var output = require('miniwrite');
+var ministyle = require('ministyle');
+var miniwrite = require('miniwrite');
 var loader = require('../lib/loader');
 var runnerModule = require('../lib/runner');
 
-var util = require('util');
+//var util = require('util');
 
 module.exports = function (grunt) {
 
-	var runner = runnerModule.getRunner(taskTv4, output.createGrunt(grunt), loader.getLoaders(), reporter);
+	var out = miniwrite.grunt(grunt);
+	var style = ministyle.grunt();
+	var report = reporter.getReporter(out, style);
+	var runner = runnerModule.getRunner(taskTv4, loader.getLoaders(), out, style);
 
 	grunt.registerMultiTask('tv4', 'Validate values against json-schema v4.', function () {
 		var done = this.async();
 
 		//import options
-		var context = runner.getContext();
-
-		context.options = this.options(runner.getOptions({
+		var context = runner.getContext(this.options(runner.getOptions({
 			timeout: 5000
-		}));
+		})));
+		var objects = [];
 
 		if (context.options.fresh) {
 			context.tv4 = taskTv4.freshApi();
+		}
+		else {
+			context.tv4 = taskTv4;
 		}
 
 		grunt.util._.each(context.options.schemas, function (schema, uri) {
@@ -55,7 +60,7 @@ module.exports = function (grunt) {
 					grunt.log.warn('file "' + filePath + '" not found.');
 					return true;
 				}
-				context.objects.push({
+				objects.push({
 					path: filePath,
 					label: filePath,
 					root: context.options.root
@@ -73,7 +78,7 @@ module.exports = function (grunt) {
 		if (typeof values === 'object') {
 			var keyPrefix = (Array.isArray(values) ? 'value #' : '');
 			grunt.util._.some(values, function (value, key) {
-				context.objects.push({
+				objects.push({
 					label: keyPrefix + key,
 					value: value,
 					root: context.options.root
@@ -100,15 +105,22 @@ module.exports = function (grunt) {
 
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-		grunt.verbose.writeln(util.inspect(context));
+		//grunt.verbose.writeln(util.inspect(context));
 
-
-		context.run(function(err, success) {
-			//grunt.log.writeln(util.inspect(arguments));
-			if (!success) {
-				grunt.log.writeln('');
+		context.validate(objects, function (err, job) {
+			if (err) {
+				throw err;
 			}
-			done(success);
+			if (job) {
+				report.reportBulk(job.failed, job.passed);
+				if (!job.success) {
+					grunt.log.writeln('');
+				}
+				done(job.success);
+			}
+			else {
+				done(false);
+			}
 		});
 	});
 };
