@@ -38,9 +38,9 @@
     "jsonpointer.js": "0.3.0",
     "request": "2.25.0",
     "tv4": "~1.0.11",
-    "ministyle": "git://github.com/Bartvds/ministyle/#master",
-    "miniwrite": "git://github.com/Bartvds/miniwrite/#master",
-    "tv4-reporter": "git://github.com/Bartvds/tv4-reporter/#09ac4b50ae2a300031e710d1cd41cd0fa5e3ecb3"
+    "ministyle": "~0.1.0",
+    "miniwrite": "~0.1.0",
+    "tv4-reporter": "0.0.2"
   },
   "devDependencies": {
     "grunt-cli": "~0.1",
