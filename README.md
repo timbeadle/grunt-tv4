@@ -165,8 +165,9 @@ grunt.initConfig({
 
 ## History
 
-* 0.3.0 - Added `.values` option. Refactored to use modular components:
-	* Extracted error and summary formatting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter) and [miniwrite](https://github.com/Bartvds/miniwrite)
+* 0.3.0 - Big intenral rewrite:
+	* Added `.values` option. 
+	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [miniwrite](https://github.com/Bartvds/ministyle).
 	* Moved loader logic to own stand-alone module (for later extraction)
 	* Extracted test running logic to own module (for layer extraction)
 * 0.2.1 - Added support to report subErrors (for anyOf/oneOf)
