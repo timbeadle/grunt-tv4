@@ -151,7 +151,7 @@ grunt.initConfig({
 		},
 
 		myCallback: {
-			// alternately pass a function() to returns a collection of values (array or object)
+			// alternately pass a function() to return a collection of values (array or object)
 			values: function() {
 				return {
 					'apple': grunt.file.readJSON('data/apple.json'),
@@ -165,11 +165,11 @@ grunt.initConfig({
 
 ## History
 
-* 0.3.0 - Big intenral rewrite:
+* 0.3.0 - Big internal rewrite:
 	* Added `.values` option. 
 	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [miniwrite](https://github.com/Bartvds/ministyle).
 	* Moved loader logic to own stand-alone module (for later extraction)
-	* Extracted test running logic to own module (for layer extraction)
+	* Extracted test-running logic to own module (for later extraction)
 * 0.2.1 - Added support to report subErrors (for anyOf/oneOf)
 * 0.2.0 - Updated to follow the Grunt conventions.
 * 0.1.4 - Updated `tv4` to version `1.0.11` 
