@@ -167,7 +167,7 @@ grunt.initConfig({
 
 * 0.3.0 - Big internal rewrite:
 	* Added `.values` option. 
-	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [miniwrite](https://github.com/Bartvds/ministyle).
+	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [ministyle](https://github.com/Bartvds/ministyle).
 	* Moved loader logic to own stand-alone module (for later extraction)
 	* Extracted test-running logic to own module (for later extraction)
 * 0.2.1 - Added support to report subErrors (for anyOf/oneOf)
