@@ -302,6 +302,14 @@ module.exports = function (grunt) {
 						'callbackNumber': 1
 					};
 				}
+			},
+			pass_package: {
+				options: {
+					fresh: true,
+					multi: false,
+					root: 'test/fixtures/package/package-v1.json'
+				},
+				"src": ['./package.json']
 			}
 		}
 	});
@@ -340,5 +348,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('edit_03', ['jshint', 'tv4:fail_subError']);
 
 	grunt.registerTask('run', ['fail']);
+	grunt.registerTask('dev', ['tv4:pass_package']);
 	grunt.registerTask('default', ['test']);
 };
