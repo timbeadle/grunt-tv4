@@ -181,3 +181,7 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Bartvds/grunt-tv4/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
