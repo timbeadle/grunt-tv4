@@ -10,3 +10,4 @@ Gruntfile.js
 /node_modules
 /test
 /*.tgz
+/*.txt

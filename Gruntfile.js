@@ -339,7 +339,7 @@ module.exports = function (grunt) {
 				options: {
 					fresh: true,
 					multi: false,
-					root: 'test/fixtures/package/package-v1.json'
+					root: require('package.json-schema').get()
 				},
 				"src": ['./package.json']
 			}
