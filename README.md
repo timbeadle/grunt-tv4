@@ -88,6 +88,7 @@ grunt.initConfig({
             // - path to json
             // - http-url
             // - schema object
+            // - callback that returns one of the above
 			root: grunt.file.readJSON('schema/main.json'),
 
 			// show multiple errors per file (off by default)
@@ -96,13 +97,13 @@ grunt.initConfig({
 			// create a new tv4 instance for every target (off by default)
 			fresh: true,
 
-			// add schemas in bulk (each required to have an 'id' property)
+			// add schemas in bulk (each required to have an 'id' property) (can be a callback)
 			add: [
 				 grunt.file.readJSON('schema/apple.json'),
 				 grunt.file.readJSON('schema/pear.json')
 			],
 
-			// set schemas by URI
+			// set schemas by URI (can be a callback)
 			schemas: {
 				'http://example.com/schema/apple': grunt.file.readJSON('schema/apple.json'),
 				'http://example.com/schema/pear': grunt.file.readJSON('schema/pear.json')
@@ -165,6 +166,7 @@ grunt.initConfig({
 
 ## History
 
+* 0.4.0 - Updated some depedencies. `root`, `add` and `schemas` can be a callback function (for lazy init).
 * 0.3.0 - Big internal rewrite:
 	* Added `.values` option. 
 	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [ministyle](https://github.com/Bartvds/ministyle).

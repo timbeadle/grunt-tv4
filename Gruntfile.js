@@ -207,6 +207,38 @@ module.exports = function (grunt) {
 					'test/fixtures/bulk/pass.json'
 				]
 			},
+			pass_rootObject_cb: {
+				options: {
+					fresh: true,
+					root: function () {
+						return grunt.file.readJSON('test/fixtures/bulk/schema/schema.json');
+					},
+					add: [
+						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
+					]
+				},
+				src: [
+					'test/fixtures/bulk/pass.json',
+					'test/fixtures/bulk/pass.json'
+				]
+			},
+			pass_rootObject_add_cb: {
+				options: {
+					fresh: true,
+					root: grunt.file.readJSON('test/fixtures/bulk/schema/schema.json'),
+					add: function () {
+						return [
+							grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
+							grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
+						];
+					}
+				},
+				src: [
+					'test/fixtures/bulk/pass.json',
+					'test/fixtures/bulk/pass.json'
+				]
+			},
 			fail_rootObject: {
 				options: {
 					fresh: true,

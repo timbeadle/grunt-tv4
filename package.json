@@ -1,7 +1,7 @@
 {
   "name": "grunt-tv4",
   "description": "Validate values against json-schema v4",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "homepage": "https://github.com/Bartvds/grunt-tv4",
   "author": {
     "name": "Bart van der Schoor",
@@ -23,13 +23,15 @@
   "keywords": [
     "gruntplugin",
     "validate",
+    "validator",
     "json",
+    "schema",
     "json-schema",
     "tv4"
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.10.0"
   },
   "scripts": {
     "test": "grunt test"
@@ -37,10 +39,10 @@
   "dependencies": {
     "jsonpointer.js": "0.3.0",
     "request": "2.25.0",
-    "tv4": "~1.0.11",
+    "tv4": "~1.0.14",
     "ministyle": "~0.1.0",
     "miniwrite": "~0.1.0",
-    "tv4-reporter": "0.0.2"
+    "tv4-reporter": "~0.0.3"
   },
   "devDependencies": {
     "grunt-cli": "~0.1",
