@@ -1,6 +1,6 @@
 # grunt-tv4
 
-[![Build Status](https://secure.travis-ci.org/Bartvds/grunt-tv4.png?branch=master)](http://travis-ci.org/Bartvds/grunt-tv4) [![Dependency Status](https://gemnasium.com/Bartvds/grunt-tv4.png)](https://gemnasium.com/Bartvds/grunt-tv4) [![NPM version](https://badge.fury.io/js/grunt-tv4.png)](http://badge.fury.io/js/grunt-tv4)
+[![Build Status](https://secure.travis-ci.org/Bartvds/grunt-tv4.png?branch=master)](http://travis-ci.org/Bartvds/grunt-tv4) [![Dependency Status](https://david-dm.org/Bartvds/grunt-tv4.svg)](https://david-dm.org/Bartvds/grunt-tv4) [![devDependency Status](https://david-dm.org/Bartvds/grunt-tv4/dev-status.svg)](https://david-dm.org/Bartvds/grunt-tv4#info=devDependencies) [![NPM version](https://badge.fury.io/js/grunt-tv4.png)](http://badge.fury.io/js/grunt-tv4)
 
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate values against [json-schema](http://json-schema.org/) draft v4
 
