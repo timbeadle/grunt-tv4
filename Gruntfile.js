@@ -14,6 +14,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-continue');
+	grunt.loadNpmTasks('grunt-release-it');
 
 	grunt.loadTasks('tasks');
 
@@ -46,6 +47,15 @@ module.exports = function (grunt) {
 					port: 9090,
 					base: 'test/fixtures/'
 				}
+			}
+		},
+		'release-it': {
+			options: {
+				pkgFiles: ['package.json'],
+				commitMessage: 'Release %s',
+				tagName: '%s',
+				tagAnnotation: 'Release %s',
+				buildCommand: false
 			}
 		},
 		tv4: {

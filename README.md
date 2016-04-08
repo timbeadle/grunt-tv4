@@ -1,12 +1,17 @@
 # grunt-tv4
 
-[![Build Status](https://secure.travis-ci.org/timbeadle/grunt-tv4.png?branch=master)](http://travis-ci.org/timbeadle/grunt-tv4) [![Dependency Status](https://david-dm.org/timbeadle/grunt-tv4.svg)](https://david-dm.org/timbeadle/grunt-tv4) [![devDependency Status](https://david-dm.org/timbeadle/grunt-tv4/dev-status.svg)](https://david-dm.org/timbeadle/grunt-tv4#info=devDependencies) [![NPM version](https://badge.fury.io/js/grunt-tv4.png)](http://badge.fury.io/js/grunt-tv4)
+[![npm version](https://img.shields.io/npm/v/grunt-tv4.svg)](https://www.npmjs.com/package/grunt-tv4)
+[![Downloads/month](https://img.shields.io/npm/dm/grunt-tv4.svg)](https://www.npmjs.com/package/grunt-tv4)
+[![Build Status](https://travis-ci.org/timbeadle/grunt-tv4.svg?branch=master)](https://travis-ci.org/timbeadle/grunt-tv4)
+[![Dependency Status](https://david-dm.org/timbeadle/grunt-tv4.svg)](https://david-dm.org/timbeadle/grunt-tv4)
+[![devDependency Status](https://david-dm.org/timbeadle/grunt-tv4/dev-status.svg)](https://david-dm.org/timbeadle/grunt-tv4#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/timbeadle/grunt-tv4/badges/gpa.svg)](https://codeclimate.com/github/timbeadle/grunt-tv4)
 
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate values against [json-schema](http://json-schema.org/) draft v4
 
 ## Getting Started
 
-This plugin requires Grunt `~0.4.1`
+This plugin requires Grunt `>=0.4.1`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -166,7 +171,11 @@ grunt.initConfig({
 
 ## History
 
-* 0.4.0 - Updated some depedencies. `root`, `add` and `schemas` can be a callback function (for lazy init).
+* 0.4.2
+	* Typos fixed in code examples.
+	* Update grunt in peerDependencies to support grunt v1.
+	* Update docs to reflect change of project ownership.
+* 0.4.0 - Updated some dependencies. `root`, `add` and `schemas` can be a callback function (for lazy init).
 * 0.3.0 - Big internal rewrite:
 	* Added `.values` option.
 	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [ministyle](https://github.com/Bartvds/ministyle).
@@ -176,7 +185,7 @@ grunt.initConfig({
 * 0.2.0 - Updated to follow the Grunt conventions.
 * 0.1.4 - Updated `tv4` to version `1.0.11`
   * Added support for `tv4.addFormat()` / `languages` / `checkRecursive` / `banUnknownProperties`.
-* 0.1.3 - Support for loading remote references (JSON Schema's `$ref`).
+* 0.1.3 - Support for loading remote references (JSON Schemas `$ref`).
 * 0.1.1 - Bugfixes and improved reporting
 * 0.1.0 - First release with synchronous validation
 
