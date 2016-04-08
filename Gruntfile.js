@@ -372,7 +372,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('pass', passNames);
 	grunt.registerTask('fail', failNames);
 
-	grunt.registerTask('test', ['jshint', 'connect', 'pass', 'continueOn', 'fail', 'continueOff']);
+	grunt.registerTask('test', ['jshint', 'connect', 'pass', 'continue:on', 'fail', 'continue:off']);
 
 	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:fail_many_multi']);
 	grunt.registerTask('edit_01', ['jshint', 'tv4:fail_subErrorMulti']);
