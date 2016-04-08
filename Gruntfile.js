@@ -1,6 +1,6 @@
 /*
  * grunt-tv4
- * https://github.com/Bartvds/grunt-tv4
+ * https://github.com/timbeadle/grunt-tv4
  *
  * Copyright (c) 2013 Bart van der Schoor
  * Licensed under the MIT license.
