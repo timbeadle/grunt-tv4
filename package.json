@@ -14,6 +14,7 @@
   "bugs": {
     "url": "https://github.com/timbeadle/grunt-tv4/issues"
   },
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
