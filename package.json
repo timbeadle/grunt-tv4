@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-continue": "0.0.1",
+    "grunt-continue": "^0.1.0",
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-jshint": "^0.10.0",
     "jshint-path-reporter": "~0.1.3",
