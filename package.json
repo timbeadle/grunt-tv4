@@ -45,7 +45,7 @@
     "tv4-reporter": "0.0.4"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "^1.0.1",
     "grunt-continue": "0.0.1",
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-jshint": "^0.10.0",
