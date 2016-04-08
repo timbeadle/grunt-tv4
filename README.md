@@ -49,7 +49,7 @@ grunt.initConfig({
 	tv4: {
 		options: {
 		    root: grunt.file.readJSON('schema/main.json')
-		}
+		},
 		myTarget: {
 			src: ['data/*.json']
 		}
@@ -120,11 +120,11 @@ grunt.initConfig({
 			},
 
 			// passed to tv4.validate()
-			checkRecursive: false
+			checkRecursive: false,
 			// passed to tv4.validate()
-			banUnknownProperties: false
+			banUnknownProperties: false,
 			// passed tv4.language()
-			language: 'de'
+			language: 'de',
 			// passed tv4.addLanguage()
 			languages: {
 				'de': { ... }
