@@ -14,12 +14,7 @@
   "bugs": {
     "url": "https://github.com/timbeadle/grunt-tv4/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/timbeadle/grunt-tv4/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "gruntplugin",
     "validate",
