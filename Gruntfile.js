@@ -11,10 +11,8 @@
 module.exports = function (grunt) {
 	/*eslint no-unused-vars:0 */
 
-	grunt.loadNpmTasks('grunt-eslint');
-	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-continue');
-	grunt.loadNpmTasks('grunt-release-it');
+	// load all npm grunt tasks
+	require('load-grunt-tasks')(grunt);
 
 	grunt.loadTasks('tasks');
 

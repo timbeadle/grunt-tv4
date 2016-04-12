@@ -54,6 +54,7 @@
     "grunt-eslint": "^18.0.0",
     "grunt-release-it": "^1.0.1",
     "latest": "^0.1.2",
+    "load-grunt-tasks": "^3.5.0",
     "package.json-schema": "~0.1.2"
   },
   "peerDependencies": {
