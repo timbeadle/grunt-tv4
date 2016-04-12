@@ -9,7 +9,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-	/*jshint unused:false*/
+	/*eslint no-unused-vars:0 */
 
 	grunt.loadNpmTasks('grunt-eslint');
 	grunt.loadNpmTasks('grunt-contrib-connect');
@@ -278,7 +278,7 @@ module.exports = function (grunt) {
 				},
 				src: [
 					'test/fixtures/subError/fail.json',
-					'test/fixtures/subError/fail_deeper.json',
+					'test/fixtures/subError/fail_deeper.json'
 				]
 			},
 			fail_subErrorMulti: {
@@ -288,7 +288,7 @@ module.exports = function (grunt) {
 					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
 				},
 				src: [
-					'test/fixtures/subError/fail_deeper.json',
+					'test/fixtures/subError/fail_deeper.json'
 				]
 			},
 			pass_values: {
