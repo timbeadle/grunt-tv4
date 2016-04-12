@@ -2,7 +2,7 @@
 .gitignore
 .gitmodules
 .travis.yml
-.jshintrc
+.eslintrc
 bower.json
 Gruntfile.js
 
