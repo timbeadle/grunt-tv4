@@ -171,6 +171,11 @@ grunt.initConfig({
 
 ## History
 
+* 0.5.0
+	* Bring travis node targets up to date
+	* Remove grunt-cli as a devDependency (it should be installed globally)
+	* devDependencies: grunt 1.0.1
+	* peerDependencies: grunt >= 0.4.1
 * 0.4.2
 	* Typos fixed in code examples.
 	* Update grunt in peerDependencies to support grunt v1.
