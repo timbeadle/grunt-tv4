@@ -9,9 +9,9 @@
 'use strict';
 
 module.exports = function (grunt) {
-	/*jshint unused:false*/
+	/*eslint no-unused-vars:0 */
 
-	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-eslint');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-continue');
 	grunt.loadNpmTasks('grunt-release-it');
@@ -31,11 +31,11 @@ module.exports = function (grunt) {
 	};
 
 	grunt.initConfig({
-		jshint: {
-			options: grunt.util._.defaults(grunt.file.readJSON('.jshintrc'), {
-				reporter: './node_modules/jshint-path-reporter'
-			}),
-			all: [
+		eslint: {
+			options: {
+				configFile: '.eslintrc'
+			},
+			src: [
 				'Gruntfile.js',
 				'lib/**/*.js',
 				'tasks/**/*.js'
@@ -278,7 +278,7 @@ module.exports = function (grunt) {
 				},
 				src: [
 					'test/fixtures/subError/fail.json',
-					'test/fixtures/subError/fail_deeper.json',
+					'test/fixtures/subError/fail_deeper.json'
 				]
 			},
 			fail_subErrorMulti: {
@@ -288,7 +288,7 @@ module.exports = function (grunt) {
 					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
 				},
 				src: [
-					'test/fixtures/subError/fail_deeper.json',
+					'test/fixtures/subError/fail_deeper.json'
 				]
 			},
 			pass_values: {
@@ -382,12 +382,12 @@ module.exports = function (grunt) {
 	grunt.registerTask('pass', passNames);
 	grunt.registerTask('fail', failNames);
 
-	grunt.registerTask('test', ['jshint', 'connect', 'pass', 'continue:on', 'fail', 'continue:off']);
+	grunt.registerTask('test', ['eslint', 'connect', 'pass', 'continue:on', 'fail', 'continue:off']);
 
-	grunt.registerTask('dev', ['jshint', 'connect', 'tv4:fail_many_multi']);
-	grunt.registerTask('edit_01', ['jshint', 'tv4:fail_subErrorMulti']);
-	grunt.registerTask('edit_02', ['jshint', 'tv4:pass_values', 'tv4:fail_valuesArray', 'tv4:fail_valuesObject', 'tv4:fail_valuesCallback']);
-	grunt.registerTask('edit_03', ['jshint', 'tv4:fail_subError']);
+	grunt.registerTask('dev', ['eslint', 'connect', 'tv4:fail_many_multi']);
+	grunt.registerTask('edit_01', ['eslint', 'tv4:fail_subErrorMulti']);
+	grunt.registerTask('edit_02', ['eslint', 'tv4:pass_values', 'tv4:fail_valuesArray', 'tv4:fail_valuesObject', 'tv4:fail_valuesCallback']);
+	grunt.registerTask('edit_03', ['eslint', 'tv4:fail_subError']);
 
 	grunt.registerTask('run', ['fail']);
 	grunt.registerTask('dev', ['tv4:pass_package']);
