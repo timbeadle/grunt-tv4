@@ -43,7 +43,7 @@
     "miniwrite": "~0.1.3",
     "request": "~2.78.0",
     "tv4": "^1.1.0",
-    "tv4-reporter": "0.0.4"
+    "tv4-reporter": "~1.0.0"
   },
   "devDependencies": {
     "eslint-plugin-jsdoc": "^2.3.1",
