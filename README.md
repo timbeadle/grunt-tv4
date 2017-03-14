@@ -171,28 +171,7 @@ grunt.initConfig({
 
 ## History
 
-* 0.5.0
-	* Bring travis node targets up to date
-	* Remove grunt-cli as a devDependency (it should be installed globally)
-	* devDependencies: grunt 1.0.1
-	* peerDependencies: grunt >= 0.4.1
-* 0.4.2
-	* Typos fixed in code examples.
-	* Update grunt in peerDependencies to support grunt v1.
-	* Update docs to reflect change of project ownership.
-* 0.4.0 - Updated some dependencies. `root`, `add` and `schemas` can be a callback function (for lazy init).
-* 0.3.0 - Big internal rewrite:
-	* Added `.values` option.
-	* Extracted reporting to [tv4-reporter](https://github.com/Bartvds/tv4-reporter), [miniwrite](https://github.com/Bartvds/miniwrite) and [ministyle](https://github.com/Bartvds/ministyle).
-	* Moved loader logic to own stand-alone module (for later extraction)
-	* Extracted test-running logic to own module (for later extraction)
-* 0.2.1 - Added support to report subErrors (for anyOf/oneOf)
-* 0.2.0 - Updated to follow the Grunt conventions.
-* 0.1.4 - Updated `tv4` to version `1.0.11`
-  * Added support for `tv4.addFormat()` / `languages` / `checkRecursive` / `banUnknownProperties`.
-* 0.1.3 - Support for loading remote references (JSON Schemas `$ref`).
-* 0.1.1 - Bugfixes and improved reporting
-* 0.1.0 - First release with synchronous validation
+- See [CHANGELOG.md](CHANGELOG.md).
 
 
 ## Contributing
