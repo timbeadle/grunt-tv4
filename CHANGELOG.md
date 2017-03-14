@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.0] - 2017-03-14
+### Fixed
+- `banUnknown` -> `banUnknownProperties` (for consistency with both [README.md](README.md) and `tv4`) - [Issue 10](https://github.com/timbeadle/grunt-tv4/issues/10)
+
+### Updated
+- `banUnknownProperties` now defaults to false - [Pull 13](https://github.com/timbeadle/grunt-tv4/pull/13)
+- Dependencies upgraded:
+  - request@2.81.0
+  - eslint-plugin-jsdoc@2.4.0
+  - eslint-plugin-node@4.2.1
+
 ## [1.0.0] - 2016-11-06
 ### Added
 - node v7 support in .travis.yml
@@ -65,6 +76,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[2.0.0]: https://github.com/timbeadle/grunt-tv4/compare/1.0.0...2.0.0
 [1.0.0]: https://github.com/timbeadle/grunt-tv4/compare/0.5.0...1.0.0
 [0.5.0]: https://github.com/timbeadle/grunt-tv4/compare/0.4.2...0.5.0
 [0.4.2]: https://github.com/timbeadle/grunt-tv4/compare/0.4.0...0.4.2
