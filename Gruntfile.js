@@ -349,7 +349,7 @@ module.exports = function (grunt) {
 					multi: false,
 					root: require('package.json-schema').get()
 				},
-				"src": ['./package.json']
+				'src': ['./package.json']
 			}
 		}
 	});
