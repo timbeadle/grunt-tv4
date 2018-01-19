@@ -1,20 +1,6 @@
 {
-	"intProp": 1,
-	"stringProp": "aa1",
-	"shallowArray": [
-		2,
-		"bb2"
-	],
-	"deepArray": [
-		3,
-		"cc3",
-		[
-			4,
-			"dd4",
-			[
-				5,
-				"ee5"
-			]
-		]
-	]
+  "intProp": 1,
+  "stringProp": "aa1",
+  "shallowArray": [2, "bb2"],
+  "deepArray": [3, "cc3", [4, "dd4", [5, "ee5"]]]
 }

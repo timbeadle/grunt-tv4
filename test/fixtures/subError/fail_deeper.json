@@ -1,23 +1,6 @@
 {
-	"intProp": false,
-	"stringProp": null,
-	"shallowArray": [
-		false,
-		true
-	],
-	"deepArray": [
-		3,
-		"cc3",
-		[
-			4,
-			"dd4",
-			[
-				5,
-				[
-					6,
-					false
-				]
-			]
-		]
-	]
+  "intProp": false,
+  "stringProp": null,
+  "shallowArray": [false, true],
+  "deepArray": [3, "cc3", [4, "dd4", [5, [6, false]]]]
 }

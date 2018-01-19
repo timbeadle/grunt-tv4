@@ -1,12 +1,12 @@
 {
-	"id": "beta",
-	"properties": {
-		"required" : ["intProp", "stringProp"],
-		"intProp": {
-			"type": "integer"
-		},
-		"stringProp": {
-			"type": "string"
-		}
-	}
+  "id": "beta",
+  "properties": {
+    "required": ["intProp", "stringProp"],
+    "intProp": {
+      "type": "integer"
+    },
+    "stringProp": {
+      "type": "string"
+    }
+  }
 }

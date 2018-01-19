@@ -1,9 +1,9 @@
 {
-	"type": "object",
-	"required" : ["betaType"],
-	"properties": {
-		"betaType": {
-			"$ref": "http://localhost:9090/remote/schema/beta.json"
-		}
-	}
+  "type": "object",
+  "required": ["betaType"],
+  "properties": {
+    "betaType": {
+      "$ref": "http://localhost:9090/remote/schema/beta.json"
+    }
+  }
 }
