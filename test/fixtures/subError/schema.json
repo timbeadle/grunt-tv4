@@ -1,36 +1,36 @@
 {
-	"type": "object",
-	"required": ["intProp", "stringProp", "shallowArray", "deepArray"],
-	"properties": {
-		"stringProp": {
-			"$ref": "#/definitions/multiType"
-		},
-		"intProp": {
-			"$ref": "#/definitions/multiType"
-		},
-		"shallowArray": {
-			"$ref": "#/definitions/multiType"
-		},
-		"deepArray": {
-			"$ref": "#/definitions/multiType"
-		}
-	},
-	"definitions": {
-		"multiType": {
-			"oneOf": [
-				{
-					"type": "string"
-				},
-				{
-					"type": "number"
-				},
-				{
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/multiType"
-					}
-				}
-			]
-		}
-	}
+  "type": "object",
+  "required": ["intProp", "stringProp", "shallowArray", "deepArray"],
+  "properties": {
+    "stringProp": {
+      "$ref": "#/definitions/multiType"
+    },
+    "intProp": {
+      "$ref": "#/definitions/multiType"
+    },
+    "shallowArray": {
+      "$ref": "#/definitions/multiType"
+    },
+    "deepArray": {
+      "$ref": "#/definitions/multiType"
+    }
+  },
+  "definitions": {
+    "multiType": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/multiType"
+          }
+        }
+      ]
+    }
+  }
 }

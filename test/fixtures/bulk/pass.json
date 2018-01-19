@@ -1,8 +1,8 @@
 {
-	"alphaType": {
-		"betaType": {
-			"intProp": 1,
-			"stringProp": "one"
-		}
-	}
+  "alphaType": {
+    "betaType": {
+      "intProp": 1,
+      "stringProp": "one"
+    }
+  }
 }
