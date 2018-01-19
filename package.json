@@ -30,7 +30,12 @@
     "json-schema",
     "tv4"
   ],
-  "main": "Gruntfile.js",
+  "main": "tasks/tv4.js",
+  "files": [
+    "lib/loader.js",
+    "lib/runner.js",
+    "tasks/tv4.js"
+  ],
   "engines": {
     "node": ">=4.0.0"
   },
@@ -47,6 +52,7 @@
   },
   "devDependencies": {
     "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.8.0",
     "eslint-plugin-jsdoc": "^3.2.0",
     "eslint-plugin-node": "^5.2.1",
     "grunt": "^1.0.1",
