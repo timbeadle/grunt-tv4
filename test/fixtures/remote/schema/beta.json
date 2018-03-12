@@ -1,12 +1,12 @@
 {
-  "type": "object",
-  "required": ["intProp", "stringProp"],
-  "properties": {
-    "intProp": {
-      "type": "integer"
-    },
-    "stringProp": {
-      "type": "string"
-    }
-  }
+	"type": "object",
+	"required" : ["intProp", "stringProp"],
+	"properties": {
+		"intProp": {
+			"type": "integer"
+		},
+		"stringProp": {
+			"type": "string"
+		}
+	}
 }

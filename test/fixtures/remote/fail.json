@@ -1,8 +1,8 @@
 {
-  "alphaType": {
-    "betaType": {
-      "intProp": "Hello!",
-      "stringProp": 3210
-    }
-  }
+	"alphaType": {
+		"betaType": {
+			"intProp": "Hello!",
+			"stringProp": 3210
+		}
+	}
 }

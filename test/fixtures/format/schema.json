@@ -1,10 +1,10 @@
 {
-  "id": "formatSchema",
-  "type": "object",
-  "required": ["dateProp"],
-  "properties": {
-    "dateProp": {
-      "format": "date"
-    }
-  }
+	"id" : "formatSchema",
+	"type": "object",
+	"required" : ["dateProp"],
+	"properties": {
+		"dateProp": {
+			"format": "date"
+		}
+	}
 }

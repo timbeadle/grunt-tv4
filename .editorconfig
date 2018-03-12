@@ -1,17 +1,16 @@
-root = true
+# http://editorconfig.org
 
-# Universal syntax defaults
-# - UTF-8 for greatest compatibility
-# - Unix-style line endings
-# - always end files with a new line
-# - default to 2-space indentation for most languages
 [*]
-charset = utf-8
+indent_style = tab
+indent_size = 4
 end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
 insert_final_newline = true
+
+[*.yml]
 indent_style = space
 indent_size = 2
-trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false

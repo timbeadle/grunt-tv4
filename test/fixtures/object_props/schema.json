@@ -1,13 +1,13 @@
 {
-  "id": "object_props",
-  "type": "object",
-  "required": ["intProp", "stringProp"],
-  "properties": {
-    "intProp": {
-      "type": "integer"
-    },
-    "stringProp": {
-      "type": "string"
-    }
-  }
+	"id": "object_props",
+	"type": "object",
+	"required" : ["intProp", "stringProp"],
+	"properties": {
+		"intProp": {
+			"type": "integer"
+		},
+		"stringProp": {
+			"type": "string"
+		}
+	}
 }
