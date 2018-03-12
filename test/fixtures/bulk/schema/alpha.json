@@ -1,9 +1,9 @@
 {
-  "id": "alpha",
-  "properties": {
-    "required": ["betaType"],
-    "betaType": {
-      "$ref": "beta"
-    }
-  }
+	"id": "alpha",
+	"properties": {
+		"required" : ["betaType"],
+		"betaType": {
+			"$ref": "beta"
+		}
+	}
 }

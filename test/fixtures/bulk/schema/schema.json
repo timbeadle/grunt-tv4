@@ -1,33 +1,33 @@
 {
-  "type": "object",
-  "required": ["alphaType"],
-  "properties": {
-    "alphaType": {
-      "$ref": "#/definitions/alpha"
-    }
-  },
-  "definitions": {
-    "alpha": {
-      "type": "object",
-      "required": ["betaType"],
-      "properties": {
-        "required": ["betaType"],
-        "betaType": {
-          "$ref": "#/definitions/beta"
-        }
-      }
-    },
-    "beta": {
-      "type": "object",
-      "required": ["intProp", "stringProp"],
-      "properties": {
-        "intProp": {
-          "type": "integer"
-        },
-        "stringProp": {
-          "type": "string"
-        }
-      }
-    }
-  }
+	"type": "object",
+	"required": ["alphaType"],
+	"properties": {
+		"alphaType": {
+			"$ref": "#/definitions/alpha"
+		}
+	},
+	"definitions": {
+		"alpha": {
+			"type": "object",
+			"required": ["betaType"],
+			"properties": {
+				"required": ["betaType"],
+				"betaType": {
+					"$ref": "#/definitions/beta"
+				}
+			}
+		},
+		"beta": {
+			"type": "object",
+			"required": ["intProp", "stringProp"],
+			"properties": {
+				"intProp": {
+					"type": "integer"
+				},
+				"stringProp": {
+					"type": "string"
+				}
+			}
+		}
+	}
 }
