@@ -12,7 +12,9 @@ var taskTv4 = require('tv4').freshApi();
 var reporter = require('tv4-reporter');
 var ministyle = require('ministyle');
 var miniwrite = require('miniwrite');
+// eslint-disable-next-line node/no-unpublished-require
 var loader = require('../lib/loader');
+// eslint-disable-next-line node/no-unpublished-require
 var runnerModule = require('../lib/runner');
 
 //var util = require('util');
