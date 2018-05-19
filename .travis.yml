@@ -4,12 +4,12 @@ notifications:
       - tim.beadle@gmail.com
 language: node_js
 node_js:
+  - "10"
   - "9"
   - "8"
   - "7"
   - "6"
   - "5"
   - "4"
-  - "10"
 before_script:
   - npm install -g grunt-cli
