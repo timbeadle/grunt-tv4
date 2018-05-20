@@ -32,7 +32,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6"
   },
   "scripts": {
     "test": "grunt test"
