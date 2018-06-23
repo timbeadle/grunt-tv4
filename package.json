@@ -50,7 +50,7 @@
     "eslint": "^5.0.0",
     "eslint-plugin-jsdoc": "^3.2.0",
     "eslint-plugin-node": "^6.0.0",
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.3",
     "grunt-continue": "^0.1.0",
     "grunt-contrib-connect": "~1.0.2",
     "grunt-release-it": "^1.0.1",
