@@ -380,12 +380,12 @@ module.exports = function (grunt) {
 	grunt.registerTask('pass', passNames);
 	grunt.registerTask('fail', failNames);
 
-	grunt.registerTask('test', ['eslint', 'connect', 'pass', 'continue:on', 'fail', 'continue:off']);
+	grunt.registerTask('test', ['connect', 'pass', 'continue:on', 'fail', 'continue:off']);
 
-	grunt.registerTask('dev', ['eslint', 'connect', 'tv4:fail_many_multi']);
-	grunt.registerTask('edit_01', ['eslint', 'tv4:fail_subErrorMulti']);
-	grunt.registerTask('edit_02', ['eslint', 'tv4:pass_values', 'tv4:fail_valuesArray', 'tv4:fail_valuesObject', 'tv4:fail_valuesCallback']);
-	grunt.registerTask('edit_03', ['eslint', 'tv4:fail_subError']);
+	grunt.registerTask('dev', ['connect', 'tv4:fail_many_multi']);
+	grunt.registerTask('edit_01', ['tv4:fail_subErrorMulti']);
+	grunt.registerTask('edit_02', ['tv4:pass_values', 'tv4:fail_valuesArray', 'tv4:fail_valuesObject', 'tv4:fail_valuesCallback']);
+	grunt.registerTask('edit_03', ['tv4:fail_subError']);
 
 	grunt.registerTask('run', ['fail']);
 	grunt.registerTask('dev', ['tv4:pass_package']);
