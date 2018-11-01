@@ -53,7 +53,6 @@
     "grunt": "^1.0.3",
     "grunt-continue": "^0.1.0",
     "grunt-contrib-connect": "~2.0.0",
-    "latest": "~0.2.0",
     "load-grunt-tasks": "~4.0.0",
     "package.json-schema": "~0.2.0"
   },
