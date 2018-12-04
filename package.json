@@ -55,7 +55,7 @@
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "~4.0.0",
     "package.json-schema": "~0.2.0",
-    "snyk": "^1.112.0"
+    "snyk": "^1.113.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.1"
