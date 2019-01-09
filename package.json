@@ -36,7 +36,7 @@
   },
   "scripts": {
     "lint": "eslint --config .eslintrc.yml Gruntfile.js lib/**/*.js tasks/**/*.js",
-    "test": "snyk test --dev && npm run lint && grunt test"
+    "test": "npm run lint && grunt test"
   },
   "dependencies": {
     "grunt": "^1.0.3",
