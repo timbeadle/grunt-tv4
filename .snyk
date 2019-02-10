@@ -6,26 +6,92 @@ ignore:
     - grunt > grunt-legacy-log > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      eslint > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.017Z'
     - grunt-contrib-connect > async > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      grunt > grunt-legacy-util > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.017Z'
     - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      snyk > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
     - grunt-contrib-connect > portscanner > async > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      snyk > @snyk/dep-graph > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > inquirer > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-config > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-php-plugin > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
   SNYK-JS-LODASH-73639:
     - grunt > grunt-legacy-log > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      eslint > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.017Z'
     - grunt-contrib-connect > async > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      grunt > grunt-legacy-util > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
     - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
     - grunt-contrib-connect > portscanner > async > lodash:
         reason: None given
         expires: '2019-03-12T17:55:34.225Z'
+      snyk > @snyk/dep-graph > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > inquirer > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-php-plugin > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
+    - snyk > snyk-config > lodash:
+        reason: None given
+        expires: '2019-03-12T18:13:34.018Z'
 patch: {}
