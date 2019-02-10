@@ -36,7 +36,7 @@
   },
   "scripts": {
     "lint": "eslint --config .eslintrc.yml Gruntfile.js lib/**/*.js tasks/**/*.js",
-    "test": "npm run lint && grunt test"
+    "test": "snyk test --dev && npm run lint && grunt test"
   },
   "dependencies": {
     "grunt": "^1.0.3",
@@ -54,7 +54,8 @@
     "eslint-plugin-node": "^8.0.1",
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "~4.0.0",
-    "package.json-schema": "~0.2.0"
+    "package.json-schema": "~0.2.0",
+    "snyk": "^1.124.1"
   },
   "peerDependencies": {
     "grunt": ">=0.4.1"

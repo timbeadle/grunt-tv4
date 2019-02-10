@@ -1,0 +1,31 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.3
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-LODASH-73638:
+    - grunt > grunt-legacy-log > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+    - grunt-contrib-connect > async > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+    - grunt-contrib-connect > portscanner > async > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+  SNYK-JS-LODASH-73639:
+    - grunt > grunt-legacy-log > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+    - grunt-contrib-connect > async > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+    - grunt-contrib-connect > portscanner > async > lodash:
+        reason: None given
+        expires: '2019-03-12T17:55:34.225Z'
+patch: {}
