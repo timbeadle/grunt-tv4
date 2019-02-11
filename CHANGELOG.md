@@ -2,6 +2,27 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.1.0] - 2019-02-11
+### Added
+- .editorconfig
+- Snyk monitoring
+- node 8, 9, 10, 11 support in .travis.yml
+- eslint
+- eslint-{config,plugin}-prettier
+
+### Updated
+- tv4-reporter@1.1.0
+- eslint-plugin-jsdoc@4.1.0
+- eslint-plugin-node@8.0.1
+- load-grunt-tasks@4.0.0
+
+### Removed
+- node <6 support
+- grunt-eslint
+- grunt-release-it
+- latest
+
+
 ## [2.0.0] - 2017-03-14
 ### Fixed
 - `banUnknown` -> `banUnknownProperties` (for consistency with both [README.md](README.md) and `tv4`) - [Issue 10](https://github.com/timbeadle/grunt-tv4/issues/10)
@@ -76,6 +97,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[2.1.0]: https://github.com/timbeadle/grunt-tv4/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/timbeadle/grunt-tv4/compare/1.0.0...2.0.0
 [1.0.0]: https://github.com/timbeadle/grunt-tv4/compare/0.5.0...1.0.0
 [0.5.0]: https://github.com/timbeadle/grunt-tv4/compare/0.4.2...0.5.0
