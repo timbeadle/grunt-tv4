@@ -7,6 +7,7 @@
 [![devDependency Status](https://david-dm.org/timbeadle/grunt-tv4/dev-status.svg)](https://david-dm.org/timbeadle/grunt-tv4#info=devDependencies)
 [![Code Climate](https://codeclimate.com/github/timbeadle/grunt-tv4/badges/gpa.svg)](https://codeclimate.com/github/timbeadle/grunt-tv4)
 [![DepShield Badge](https://depshield.sonatype.org/badges/timbeadle/grunt-tv4/depshield.svg)](https://depshield.github.io)
+[![Known Vulnerabilities](https://snyk.io/test/github/timbeadle/grunt-tv4/badge.svg)](https://snyk.io/test/github/timbeadle/grunt-tv4)
 
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate values against [json-schema](http://json-schema.org/) draft v4
 
