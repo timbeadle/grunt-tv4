@@ -49,13 +49,13 @@
     "tv4-reporter": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^5.15.2",
-    "eslint-plugin-jsdoc": "^4.4.2",
+    "eslint": "^5.15.3",
+    "eslint-plugin-jsdoc": "^4.4.3",
     "eslint-plugin-node": "^8.0.1",
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "~4.0.0",
     "package.json-schema": "~0.2.0",
-    "snyk": "^1.136.3"
+    "snyk": "^1.139.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.1"
