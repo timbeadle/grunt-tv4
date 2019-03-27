@@ -39,7 +39,7 @@
     "test": "snyk test --dev && npm run lint && grunt test"
   },
   "dependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "grunt-contrib-connect": "^2.0.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
