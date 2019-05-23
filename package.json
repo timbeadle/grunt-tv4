@@ -50,14 +50,19 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-plugin-jsdoc": "^6.0.2",
+    "eslint-plugin-jsdoc": "^6.0.3",
     "eslint-plugin-node": "^8.0.1",
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "~4.0.0",
     "package.json-schema": "~0.2.0",
-    "snyk": "^1.162.1"
+    "snyk": "^1.167.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.1"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "eslint-plugin-node"
+    ]
   }
 }
