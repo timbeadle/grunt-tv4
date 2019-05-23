@@ -59,5 +59,10 @@
   },
   "peerDependencies": {
     "grunt": ">=0.4.1"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "eslint-plugin-node"
+    ]
   }
 }
