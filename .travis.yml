@@ -1,7 +1,7 @@
 notifications:
   email:
     recipients:
-      - tim.beadle@gmail.com
+      - tim@takkconsulting.co.uk
 language: node_js
 node_js:
   - "8"
