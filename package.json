@@ -32,7 +32,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "lint": "eslint --config .eslintrc.yml Gruntfile.js lib/**/*.js tasks/**/*.js",
