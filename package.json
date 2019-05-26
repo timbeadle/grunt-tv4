@@ -1,7 +1,7 @@
 {
   "name": "grunt-tv4",
   "description": "Validate values against json-schema v4",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://github.com/timbeadle/grunt-tv4",
   "author": {
     "name": "Bart van der Schoor",

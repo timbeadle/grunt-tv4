@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.1] - 2019-05-26
+### Updated
+- tv4-reporter@2.0.0
+- .npmignore file
+
+
 ## [3.0.0] - 2019-05-26
 ### Added
 - Snyk badge
@@ -113,6 +119,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[3.0.1]: https://github.com/timbeadle/grunt-tv4/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/timbeadle/grunt-tv4/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/timbeadle/grunt-tv4/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/timbeadle/grunt-tv4/compare/1.0.0...2.0.0
