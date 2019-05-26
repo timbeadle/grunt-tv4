@@ -2,6 +2,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0] - 2019-05-26
+### Added
+- Snyk badge
+- node_js v12 support in .travis.yml
+
+### Updated
+- eslint@5.16.0
+- eslint-plugin-jsdoc@7.0.2
+- eslint-plugin-node@9.1.0
+- grunt@1.0.4
+- load-grunt-tasks@5.0.0
+- snyk@1.167.2
+
+### Removed
+- node <8 support
+
 ## [2.1.0] - 2019-02-11
 ### Added
 - .editorconfig
@@ -97,6 +113,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[3.0.0]: https://github.com/timbeadle/grunt-tv4/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/timbeadle/grunt-tv4/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/timbeadle/grunt-tv4/compare/1.0.0...2.0.0
 [1.0.0]: https://github.com/timbeadle/grunt-tv4/compare/0.5.0...1.0.0
