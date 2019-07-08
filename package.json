@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-plugin-jsdoc": "^7.2.3",
+    "eslint-plugin-jsdoc": "^14.0.0",
     "eslint-plugin-node": "^9.1.0",
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "^5.0.0",
