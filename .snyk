@@ -6,6 +6,8 @@ patch:
   SNYK-JS-LODASH-450202:
     - snyk > lodash:
         patched: '2019-07-08T09:53:38.027Z'
+      snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-08T10:12:49.609Z'
     - eslint-plugin-jsdoc > lodash:
         patched: '2019-07-08T09:53:38.027Z'
     - eslint > inquirer > lodash:
