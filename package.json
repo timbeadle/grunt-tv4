@@ -47,9 +47,9 @@
     "ministyle": "~0.1.4",
     "miniwrite": "~0.1.3",
     "request": "~2.88.0",
-    "snyk": "^1.192.4",
+    "snyk": "^1.193.0",
     "tv4": "^1.1.0",
-    "tv4-reporter": "^2.0.0"
+    "tv4-reporter": "^2.0.1"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
