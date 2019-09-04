@@ -180,4 +180,4 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/timbeadle/grunt-tv4/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/timbeadle/grunt-tv4/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Greenkeeper badge](https://badges.greenkeeper.io/timbeadle/grunt-tv4.svg)](https://greenkeeper.io/)
