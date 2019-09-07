@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "grunt": "^1.0.4",
-    "grunt-contrib-connect": "^2.0.0",
+    "grunt-contrib-connect": "^2.1.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
     "miniwrite": "~0.1.3",
