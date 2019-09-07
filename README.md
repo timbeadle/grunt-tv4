@@ -8,6 +8,7 @@
 [![Code Climate](https://codeclimate.com/github/timbeadle/grunt-tv4/badges/gpa.svg)](https://codeclimate.com/github/timbeadle/grunt-tv4)
 [![DepShield Badge](https://depshield.sonatype.org/badges/timbeadle/grunt-tv4/depshield.svg)](https://depshield.github.io)
 [![Known Vulnerabilities](https://snyk.io/test/github/timbeadle/grunt-tv4/badge.svg)](https://snyk.io/test/github/timbeadle/grunt-tv4)
+[![Greenkeeper badge](https://badges.greenkeeper.io/timbeadle/grunt-tv4.svg)](https://greenkeeper.io/)
 
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate values against [json-schema](http://json-schema.org/) draft v4
 
@@ -178,6 +179,3 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/timbeadle/grunt-tv4/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Greenkeeper badge](https://badges.greenkeeper.io/timbeadle/grunt-tv4.svg)](https://greenkeeper.io/)
