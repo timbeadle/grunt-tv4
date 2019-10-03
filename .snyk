@@ -6,8 +6,6 @@ patch:
   SNYK-JS-LODASH-450202:
     - snyk > lodash:
         patched: '2019-07-08T09:53:38.027Z'
-      snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
-        patched: '2019-07-08T10:12:49.609Z'
     - eslint-plugin-jsdoc > lodash:
         patched: '2019-07-08T09:53:38.027Z'
     - eslint > inquirer > lodash:
@@ -46,3 +44,14 @@ patch:
         patched: '2019-07-08T09:53:38.027Z'
     - snyk > inquirer > lodash:
         patched: '2019-07-08T09:53:38.027Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-08T10:12:49.609Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-03T21:01:48.017Z'
+    - tv4-reporter > snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-03T21:01:48.017Z'
+    - tv4-reporter > snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-03T21:01:48.017Z'
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-03T21:01:48.017Z'
