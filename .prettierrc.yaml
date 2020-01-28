@@ -1,0 +1,8 @@
+arrowParens: "always"
+bracketSpacing: true
+endOfLine: "lf"
+insertPragma: true
+quoteProps: "consistent"
+requirePragma: true
+semi: true
+trailingComma: "es5"
