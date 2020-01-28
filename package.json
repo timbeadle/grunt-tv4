@@ -54,9 +54,6 @@
     "tv4-reporter": "^2.0.3"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-plugin-jsdoc": "^18.0.1",
-    "eslint-plugin-node": "^10.0.0",
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "^5.1.0",
     "npm-run-all": "^4.1.5",
