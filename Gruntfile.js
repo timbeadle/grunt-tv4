@@ -1,30 +1,29 @@
 /*
- * grunt-tv4
+ * Grunt wrapper for tv4 - grunt-tv4
  * https://github.com/timbeadle/grunt-tv4
  *
  * Copyright (c) 2013 Bart van der Schoor
  * Licensed under the MIT license.
  */
 
+/* eslint camelcase: 0, unicorn/filename-case: 0 */
+
 'use strict';
 
 module.exports = function (grunt) {
-	/*eslint no-unused-vars:0 */
-
-	// load all npm grunt tasks
+	// Load all npm grunt tasks
 	require('load-grunt-tasks')(grunt);
 
 	grunt.loadTasks('tasks');
 
-	var util = require('util');
-
-	//used by format checker
-	var dateRegex = /^\d{4}-\d{1,2}-\d{1,2}$/;
-	var dateValidateCallback = function (data, schema) {
+	// Used by format checker
+	const dateRegex = /^\d{4}-\d{1,2}-\d{1,2}$/;
+	const dateValidateCallback = (data) => {
 		if (typeof data !== 'string' || !dateRegex.test(data)) {
-			// return error message
+			// Return error message
 			return 'value must be string of the form: YYYY-MM-DD';
 		}
+
 		return null;
 	};
 
@@ -146,7 +145,7 @@ module.exports = function (grunt) {
 					fresh: true,
 					root: 'test/fixtures/format/schema.json',
 					formats: {
-						'date': dateValidateCallback
+						date: dateValidateCallback
 					}
 				},
 				src: [
@@ -209,7 +208,7 @@ module.exports = function (grunt) {
 			pass_rootObject_cb: {
 				options: {
 					fresh: true,
-					root: function () {
+					root: () => {
 						return grunt.file.readJSON('test/fixtures/bulk/schema/schema.json');
 					},
 					add: [
@@ -226,7 +225,7 @@ module.exports = function (grunt) {
 				options: {
 					fresh: true,
 					root: grunt.file.readJSON('test/fixtures/bulk/schema/schema.json'),
-					add: function () {
+					add: () => {
 						return [
 							grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
 							grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
@@ -327,7 +326,7 @@ module.exports = function (grunt) {
 						type: 'string'
 					}
 				},
-				values: function () {
+				values: () => {
 					return {
 						'callbackBoolean': false,
 						'callbackNumber': 1
@@ -345,25 +344,23 @@ module.exports = function (grunt) {
 		}
 	});
 
-	//used by format checker
-	var passNames = [];
-	var failNames = [];
-	var conf = grunt.config.get('tv4');
+	// Used by format checker
+	const passNames = [];
+	const failNames = [];
+	const conf = grunt.config.get('tv4');
 
-	Object.keys(conf).sort().forEach(function (name) {
-		if (/^pass_/.test(name)) {
+	Object.keys(conf).sort().forEach((name) => {
+		if (name.startsWith('pass_')) {
 			passNames.push('tv4:' + name);
 			if (conf[name]._twice) {
 				passNames.push('tv4:' + name);
 			}
-		}
-		else if (/^fail_/.test(name)) {
+		} else if (name.startsWith('fail_')) {
 			failNames.push('tv4:' + name);
 			if (conf[name]._twice) {
 				failNames.push('tv4:' + name);
 			}
-		}
-		else {
+		} else {
 			passNames.push('tv4:' + name);
 		}
 	});
