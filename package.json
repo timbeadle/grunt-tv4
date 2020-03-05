@@ -36,6 +36,7 @@
   },
   "scripts": {
     "test": "run-p test:*",
+    "test-ci": "run-p test:grunt test:lint",
     "test:grunt": "grunt test",
     "test:lint": "xo Gruntfile.js lib/**/*.js tasks/**/*.js",
     "test:snyk": "snyk test --dev",
