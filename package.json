@@ -52,7 +52,7 @@
     "request": "^2.88.2",
     "snyk": "^1.298.0",
     "tv4": "^1.1.0",
-    "tv4-reporter": "^4.0.0"
+    "tv4-reporter": "^4.0.1"
   },
   "devDependencies": {
     "grunt-continue": "^0.1.0",
