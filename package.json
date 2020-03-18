@@ -44,7 +44,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.1.0",
     "grunt-contrib-connect": "^2.1.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
