@@ -2,6 +2,24 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.0] - 2020-03-19
+### Added
+- Github actions for running tests, via test-ci npm script
+- xo linter, with .prettierrc.yaml config
+- nodejs v13 support in .travis.yml
+- npm-run-all for running npm scripts in parallel
+
+### Updated
+- Refactoring and updating to es6 features
+- grunt@1.1.0
+- request@2.88.2
+- snyk@1.299.0
+- tv4-reporter@4.0.2
+
+### Removed
+- eslint
+- nodejs <10 support
+
 ## [3.0.3] - 2019-10-13
 ### Updated
 
@@ -144,6 +162,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[4.0.0]: https://github.com/timbeadle/grunt-tv4/compare/3.0.3...4.0.0
 [3.0.3]: https://github.com/timbeadle/grunt-tv4/compare/3.0.2...3.0.3
 [3.0.2]: https://github.com/timbeadle/grunt-tv4/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/timbeadle/grunt-tv4/compare/3.0.0...3.0.1
