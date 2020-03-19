@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 	grunt.loadTasks('tasks');
 
 	// Used by format checker
-	const dateRegex = /^\d{4}-\d{1,2}-\d{1,2}$/;
+	const dateRegex = /^\d{4}(?:-\d{1,2}){2}$/;
 	const dateValidateCallback = (data) => {
 		if (typeof data !== 'string' || !dateRegex.test(data)) {
 			// Return error message
