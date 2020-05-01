@@ -59,7 +59,7 @@ module.exports = (grunt) => {
 
 		// Flatten list for sanity
 		grunt.util._.each(this.files, function (f) {
-			grunt.util._.some(f.src, function (filePath) {
+			grunt.util._.some(f.src, function (filePath) { // eslint-disable-line unicorn/no-fn-reference-in-iterator
 				if (!grunt.file.exists(filePath)) {
 					grunt.log.warn('file "' + filePath + '" not found.');
 					return true;
@@ -82,7 +82,7 @@ module.exports = (grunt) => {
 
 		if (typeof values === 'object') {
 			const keyPrefix = (Array.isArray(values) ? 'value #' : '');
-			grunt.util._.some(values, function (value, key) {
+			grunt.util._.some(values, function (value, key) { // eslint-disable-line unicorn/no-fn-reference-in-iterator
 				objects.push({
 					label: keyPrefix + key,
 					value,
@@ -93,7 +93,7 @@ module.exports = (grunt) => {
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 		if (context.options.add && Array.isArray(context.options.add)) {
-			grunt.util._.some(context.options.add, function (schema) {
+			grunt.util._.some(context.options.add, function (schema) { // eslint-disable-line unicorn/no-fn-reference-in-iterator
 				if (typeof schema === 'string') {
 					// Juggle
 					schema = grunt.file.readJSON(schema);
