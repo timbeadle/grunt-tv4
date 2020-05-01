@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-YARGSPARSER-560381:
@@ -65,3 +65,94 @@ patch:
         patched: '2019-12-12T05:21:54.435Z'
     - tv4-reporter > snyk > snyk-sbt-plugin > tree-kill:
         patched: '2019-12-12T05:21:54.435Z'
+  SNYK-JS-LODASH-567746:
+    - snyk > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - grunt-contrib-connect > async > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - grunt-contrib-connect > portscanner > async > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > inquirer > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-config > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > snyk-config > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > snyk-config > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
+    - tv4-reporter > snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T05:22:30.262Z'
