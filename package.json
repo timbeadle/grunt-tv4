@@ -40,7 +40,7 @@
     "test:grunt": "grunt test",
     "test:lint": "xo Gruntfile.js lib/**/*.js tasks/**/*.js",
     "test:snyk": "snyk test --dev",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk protect --dev",
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {

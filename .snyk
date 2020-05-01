@@ -5,7 +5,7 @@ ignore:
   SNYK-JS-YARGSPARSER-560381:
     - xo > meow > yargs-parser:
         reason: None given
-        expires: '2020-05-31T13:57:25.975Z'
+        expires: '2020-05-31T14:27:31.727Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
@@ -67,32 +67,32 @@ patch:
         patched: '2019-12-12T05:21:54.435Z'
   SNYK-JS-LODASH-567746:
     - grunt > grunt-legacy-util > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - grunt-contrib-connect > async > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > eslint > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - grunt-contrib-connect > portscanner > async > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > eslint > table > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > eslint-plugin-ava > enhance-visitors > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > eslint-import-resolver-webpack > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > eslint-plugin-unicorn > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > eslint > inquirer > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - xo > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
     - grunt > grunt-legacy-log > lodash:
-        patched: '2020-05-01T13:55:11.904Z'
+        patched: '2020-05-01T14:26:46.584Z'
