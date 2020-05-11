@@ -5,7 +5,53 @@ ignore:
   SNYK-JS-YARGSPARSER-560381:
     - xo > meow > yargs-parser:
         reason: None given
-        expires: '2020-05-31T14:27:31.727Z'
+        expires: '2020-06-10T20:34:54.151Z'
+  SNYK-JS-LODASH-567746:
+    - grunt > grunt-legacy-log > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.149Z'
+    - grunt > grunt-legacy-util > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.150Z'
+    - grunt-contrib-connect > async > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.150Z'
+    - xo > eslint > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.150Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - grunt-contrib-connect > portscanner > async > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > eslint > table > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > eslint-plugin-ava > enhance-visitors > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > eslint-import-resolver-webpack > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > eslint-plugin-unicorn > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > eslint > inquirer > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        reason: None given
+        expires: '2020-06-10T20:34:54.151Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
@@ -156,3 +202,63 @@ patch:
         patched: '2020-05-01T05:22:30.262Z'
     - tv4-reporter > snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
         patched: '2020-05-01T05:22:30.262Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - grunt-contrib-connect > async > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > eslint > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - grunt-contrib-connect > portscanner > async > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > eslint > table > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > eslint-plugin-ava > enhance-visitors > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > eslint-import-resolver-webpack > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > eslint-plugin-unicorn > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > eslint > inquirer > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2020-05-11T18:01:13.145Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - grunt-contrib-connect > async > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > eslint > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - grunt-contrib-connect > portscanner > async > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > eslint > table > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > eslint-plugin-ava > enhance-visitors > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > eslint-import-resolver-webpack > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > eslint-plugin-unicorn > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > eslint > inquirer > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2020-05-11T18:11:09.052Z'
