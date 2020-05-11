@@ -2,13 +2,12 @@
 
 [![npm version](https://img.shields.io/npm/v/grunt-tv4.svg)](https://www.npmjs.com/package/grunt-tv4)
 [![Downloads/month](https://img.shields.io/npm/dm/grunt-tv4.svg)](https://www.npmjs.com/package/grunt-tv4)
-[![Build Status](https://travis-ci.org/timbeadle/grunt-tv4.svg?branch=master)](https://travis-ci.org/timbeadle/grunt-tv4)
+[![Build Status](https://travis-ci.com/timbeadle/grunt-tv4.svg?branch=master)](https://travis-ci.com/timbeadle/grunt-tv4)
 [![Dependency Status](https://david-dm.org/timbeadle/grunt-tv4.svg)](https://david-dm.org/timbeadle/grunt-tv4)
 [![devDependency Status](https://david-dm.org/timbeadle/grunt-tv4/dev-status.svg)](https://david-dm.org/timbeadle/grunt-tv4#info=devDependencies)
 [![Code Climate](https://codeclimate.com/github/timbeadle/grunt-tv4/badges/gpa.svg)](https://codeclimate.com/github/timbeadle/grunt-tv4)
 [![DepShield Badge](https://depshield.sonatype.org/badges/timbeadle/grunt-tv4/depshield.svg)](https://depshield.github.io)
 [![Known Vulnerabilities](https://snyk.io/test/github/timbeadle/grunt-tv4/badge.svg)](https://snyk.io/test/github/timbeadle/grunt-tv4)
-[![Greenkeeper badge](https://badges.greenkeeper.io/timbeadle/grunt-tv4.svg)](https://greenkeeper.io/)
 
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate values against [json-schema](http://json-schema.org/) draft v4
 
