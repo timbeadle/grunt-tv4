@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.0] - 2020-07-07
+### Added
+- nodejs v14 support
+- travis-ci.com for test/build
+
+### Updated
+- grunt@1.2.1
+- snyk@1.360.0
+- tv4-reporter@4.1.0
+- xo@0.32.1
+
+### Removed
+- Greenkeeper badge (retired)
+- travis-ci.org for test/build
+
 ## [4.0.0] - 2020-03-19
 ### Added
 - Github actions for running tests, via test-ci npm script
@@ -162,6 +177,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[4.1.0]: https://github.com/timbeadle/grunt-tv4/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/timbeadle/grunt-tv4/compare/3.0.3...4.0.0
 [3.0.3]: https://github.com/timbeadle/grunt-tv4/compare/3.0.2...3.0.3
 [3.0.2]: https://github.com/timbeadle/grunt-tv4/compare/3.0.1...3.0.2
