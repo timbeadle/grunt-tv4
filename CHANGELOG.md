@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.2.0] - 2020-10-21
+### Added
+- nodejs v15 support
+- codeql analysis
+
+### Updated
+- HEAD branch master -> main
+- snyk policy
+- grunt@1.3.0
+- grunt-contrib-connect@3.0.0
+- snyk@1.419.1
+- tv4-reporter@4.2.0
+- prettier@2.1.2
+- xo@0.34.1
+
 ## [4.1.0] - 2020-07-07
 ### Added
 - nodejs v14 support
@@ -177,6 +192,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[4.2.0]: https://github.com/timbeadle/grunt-tv4/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/timbeadle/grunt-tv4/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/timbeadle/grunt-tv4/compare/3.0.3...4.0.0
 [3.0.3]: https://github.com/timbeadle/grunt-tv4/compare/3.0.2...3.0.3
