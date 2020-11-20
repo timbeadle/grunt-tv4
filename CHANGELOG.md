@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.0] - 2020-11-20
+
+### Added
+- Dependabot setup
+
+### Updated
+- prettier@2.2.0
+- snyk@1.430.0
+- tv4-reporter@4.3.0
+- xo@0.35.0
+
+### Removed
+- request (use native http module instead)
+
 ## [4.2.0] - 2020-10-21
 ### Added
 - nodejs v15 support
@@ -192,6 +206,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[5.0.0]: https://github.com/timbeadle/grunt-tv4/compare/4.2.0...5.0.0
 [4.2.0]: https://github.com/timbeadle/grunt-tv4/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/timbeadle/grunt-tv4/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/timbeadle/grunt-tv4/compare/3.0.3...4.0.0
