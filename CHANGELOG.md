@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.1] - 2020-11-20
+
+### Added
+- https support, and tests to verify this
+
 ## [5.0.0] - 2020-11-20
 
 ### Added
@@ -206,6 +211,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[5.1.0]: https://github.com/timbeadle/grunt-tv4/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/timbeadle/grunt-tv4/compare/4.2.0...5.0.0
 [4.2.0]: https://github.com/timbeadle/grunt-tv4/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/timbeadle/grunt-tv4/compare/4.0.0...4.1.0
