@@ -1,0 +1,10 @@
+{
+	"id": "https://localhost:9091/remote-https/schema/schema.json",
+	"type": "object",
+	"required" : ["alphaType"],
+	"properties": {
+		"alphaType": {
+			"$ref": "https://localhost:9091/remote-https/schema/alpha.json"
+		}
+	}
+}

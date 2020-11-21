@@ -39,10 +39,17 @@ module.exports = function (grunt) {
 			]
 		},
 		connect: {
-			run: {
+			http: {
 				options: {
 					port: 9090,
-					base: 'test/fixtures/'
+					base: 'test/fixtures/',
+				}
+			},
+			https: {
+				options: {
+					port: 9091,
+					base: 'test/fixtures/',
+					protocol: 'https',
 				}
 			}
 		},
@@ -77,6 +84,17 @@ module.exports = function (grunt) {
 				src: [
 					'test/fixtures/remote/pass.json',
 					'test/fixtures/remote/pass.json'
+				]
+			},
+			pass_remote_https: {
+				_twice: true,
+				options: {
+					fresh: true,
+					root: 'https://localhost:9091/remote-https/schema/schema.json'
+				},
+				src: [
+					'test/fixtures/remote-https/pass.json',
+					'test/fixtures/remote-https/pass.json'
 				]
 			},
 			pass_remote_local: {
@@ -131,6 +149,15 @@ module.exports = function (grunt) {
 					'test/fixtures/remote/fail.json'
 				]
 			},
+			fail_remote_https: {
+				options: {
+					fresh: true,
+					root: 'https://localhost:9091/remote-https/schema/schema.json'
+				},
+				src: [
+					'test/fixtures/remote-https/fail.json'
+				]
+			},
 			fail_remoteNotFound: {
 				options: {
 					fresh: true,
@@ -138,6 +165,15 @@ module.exports = function (grunt) {
 				},
 				src: [
 					'test/fixtures/remote/pass.json'
+				]
+			},
+			fail_remoteNotFound_https: {
+				options: {
+					fresh: true,
+					root: 'https://localhost:9091/remote-https/schema/non-existing.json'
+				},
+				src: [
+					'test/fixtures/remote-https/pass.json'
 				]
 			},
 			pass_format: {
