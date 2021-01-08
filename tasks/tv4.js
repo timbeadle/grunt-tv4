@@ -59,7 +59,7 @@ module.exports = (grunt) => {
 
 		// Flatten list for sanity
 		grunt.util._.each(this.files, (f) => {
-			grunt.util._.some(f.src, (filePath) => { // eslint-disable-line unicorn/no-fn-reference-in-iterator
+			grunt.util._.some(f.src, (filePath) => { // eslint-disable-line unicorn/no-array-callback-reference
 				if (!grunt.file.exists(filePath)) {
 					grunt.log.warn('file "' + filePath + '" not found.');
 					return true;
@@ -82,7 +82,7 @@ module.exports = (grunt) => {
 
 		if (typeof values === 'object') {
 			const keyPrefix = (Array.isArray(values) ? 'value #' : '');
-			grunt.util._.some(values, (value, key) => { // eslint-disable-line unicorn/no-fn-reference-in-iterator
+			grunt.util._.some(values, (value, key) => { // eslint-disable-line unicorn/no-array-callback-reference
 				objects.push({
 					label: keyPrefix + key,
 					value,
@@ -93,7 +93,7 @@ module.exports = (grunt) => {
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 		if (context.options.add && Array.isArray(context.options.add)) {
-			grunt.util._.some(context.options.add, (schema) => { // eslint-disable-line unicorn/no-fn-reference-in-iterator
+			grunt.util._.some(context.options.add, (schema) => { // eslint-disable-line unicorn/no-array-callback-reference
 				if (typeof schema === 'string') {
 					// Juggle
 					schema = grunt.file.readJSON(schema);
@@ -115,9 +115,9 @@ module.exports = (grunt) => {
 
 		// grunt.verbose.writeln(util.inspect(context));
 
-		context.validate(objects, (err, job) => {
-			if (err) {
-				throw err;
+		context.validate(objects, (error, job) => {
+			if (error) {
+				throw error;
 			}
 
 			if (job) {
