@@ -384,8 +384,9 @@ module.exports = function (grunt) {
 	const passNames = [];
 	const failNames = [];
 	const conf = grunt.config.get('tv4');
+	const confKeys = Object.keys(conf).sort();
 
-	Object.keys(conf).sort().forEach((name) => {
+	for (const name of confKeys) {
 		if (name.startsWith('pass_')) {
 			passNames.push('tv4:' + name);
 			if (conf[name]._twice) {
@@ -399,7 +400,7 @@ module.exports = function (grunt) {
 		} else {
 			passNames.push('tv4:' + name);
 		}
-	});
+	}
 
 	grunt.registerTask('pass', passNames);
 	grunt.registerTask('fail', failNames);
