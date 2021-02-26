@@ -52,6 +52,27 @@ ignore:
     - xo > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
         reason: None given
         expires: '2020-06-10T20:34:54.151Z'
+  SNYK-JS-GETOBJECT-1054932:
+    - grunt > grunt-legacy-util > getobject:
+        reason: None given
+        expires: '2021-03-12T17:36:28.163Z'
+  SNYK-JS-GLOBPARENT-1016905:
+    - xo > eslint > glob-parent:
+        reason: None given
+        expires: '2021-03-12T17:36:28.163Z'
+    - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > globby > fast-glob > glob-parent:
+        reason: None given
+        expires: '2021-03-12T17:36:28.163Z'
+    - xo > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > globby > fast-glob > glob-parent:
+        reason: None given
+        expires: '2021-03-12T17:36:28.163Z'
+    - xo > globby > fast-glob > glob-parent:
+        reason: None given
+        expires: '2021-03-12T17:36:28.163Z'
+  'npm:underscore.string:20170908':
+    - grunt > grunt-legacy-util > underscore.string:
+        reason: None given
+        expires: '2021-03-12T17:36:28.164Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
