@@ -55,11 +55,14 @@ ignore:
   SNYK-JS-GETOBJECT-1054932:
     - grunt > grunt-legacy-util > getobject:
         reason: None given
-        expires: '2021-03-12T17:36:28.163Z'
+        expires: '2021-04-16T12:21:45.820Z'
   SNYK-JS-GLOBPARENT-1016905:
     - xo > eslint > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
+      xo > globby > fast-glob > glob-parent:
+        reason: None given
+        expires: '2021-04-16T12:21:45.820Z'
     - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > globby > fast-glob > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
@@ -72,7 +75,7 @@ ignore:
   'npm:underscore.string:20170908':
     - grunt > grunt-legacy-util > underscore.string:
         reason: None given
-        expires: '2021-03-12T17:36:28.164Z'
+        expires: '2021-04-16T12:21:45.820Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
