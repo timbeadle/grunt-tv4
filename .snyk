@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.1
+version: v1.19.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-YARGSPARSER-560381:
@@ -55,14 +55,14 @@ ignore:
   SNYK-JS-GETOBJECT-1054932:
     - grunt > grunt-legacy-util > getobject:
         reason: None given
-        expires: '2021-04-16T12:21:45.820Z'
+        expires: '2021-04-23T21:37:16.090Z'
   SNYK-JS-GLOBPARENT-1016905:
     - xo > eslint > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
       xo > globby > fast-glob > glob-parent:
         reason: None given
-        expires: '2021-04-16T12:21:45.820Z'
+        expires: '2021-04-23T21:37:16.090Z'
     - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > globby > fast-glob > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
@@ -72,10 +72,26 @@ ignore:
     - xo > globby > fast-glob > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
+    - xo > globby > fast-glob > glob-parent:
+        reason: None given
+        expires: '2021-04-16T12:21:45.820Z'
   'npm:underscore.string:20170908':
     - grunt > grunt-legacy-util > underscore.string:
         reason: None given
-        expires: '2021-04-16T12:21:45.820Z'
+        expires: '2021-04-23T21:37:16.090Z'
+  SNYK-JS-HOSTEDGITINFO-1088355:
+    - npm-run-all > read-pkg > normalize-package-data > hosted-git-info:
+        reason: None given
+        expires: '2021-04-23T21:37:16.090Z'
+    - xo > eslint-plugin-import > read-pkg-up > read-pkg > normalize-package-data > hosted-git-info:
+        reason: None given
+        expires: '2021-04-23T21:37:16.090Z'
+    - xo > eslint-plugin-unicorn > read-pkg-up > read-pkg > normalize-package-data > hosted-git-info:
+        reason: None given
+        expires: '2021-04-23T21:37:16.090Z'
+    - xo > meow > read-pkg-up > read-pkg > normalize-package-data > hosted-git-info:
+        reason: None given
+        expires: '2021-04-23T21:37:16.090Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
