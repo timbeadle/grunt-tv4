@@ -37,11 +37,10 @@ module.exports = (grunt) => {
 
 		const objects = [];
 
-		if (context.options.fresh) {
-			context.tv4 = taskTv4.freshApi();
-		} else {
-			context.tv4 = taskTv4;
-		}
+		context.tv4 = context.options.fresh
+			? taskTv4.freshApi()
+			: taskTv4
+		;
 
 		grunt.util._.each(context.options.schemas, (schema, uri) => {
 			context.tv4.addSchema(uri, schema);
