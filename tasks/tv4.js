@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-module, import/extensions */
+
 /*
  * Grunt wrapper for tv4 - grunt-tv4
  * https://github.com/timbeadle/grunt-tv4
