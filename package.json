@@ -69,6 +69,10 @@
     "env": [
       "node"
     ],
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "arrow-body-style": 0,
+      "unicorn/no-array-method-this-argument": 0
+    }
   }
 }
