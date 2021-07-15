@@ -59,7 +59,7 @@
     "npm-run-all": "^4.1.5",
     "package.json-schema": "~0.2.0",
     "prettier": "^2.3.1",
-    "xo": "^0.40.2"
+    "xo": "^0.41.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.1"
@@ -69,6 +69,10 @@
     "env": [
       "node"
     ],
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "arrow-body-style": 0,
+      "unicorn/no-array-method-this-argument": 0
+    }
   }
 }
