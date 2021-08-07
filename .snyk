@@ -60,9 +60,6 @@ ignore:
     - xo > eslint > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
-      xo > globby > fast-glob > glob-parent:
-        reason: None given
-        expires: '2021-04-23T21:37:16.090Z'
     - xo > @typescript-eslint/parser > @typescript-eslint/typescript-estree > globby > fast-glob > glob-parent:
         reason: None given
         expires: '2021-03-12T17:36:28.163Z'
@@ -75,10 +72,13 @@ ignore:
     - xo > globby > fast-glob > glob-parent:
         reason: None given
         expires: '2021-04-16T12:21:45.820Z'
+    - xo > globby > fast-glob > glob-parent:
+        reason: None given
+        expires: '2021-04-23T21:37:16.090Z'
   'npm:underscore.string:20170908':
     - grunt > grunt-legacy-util > underscore.string:
         reason: None given
-        expires: '2021-04-23T21:37:16.090Z'
+        expires: '2021-09-06T17:39:44.572Z'
   SNYK-JS-HOSTEDGITINFO-1088355:
     - npm-run-all > read-pkg > normalize-package-data > hosted-git-info:
         reason: None given
@@ -92,6 +92,10 @@ ignore:
     - xo > meow > read-pkg-up > read-pkg > normalize-package-data > hosted-git-info:
         reason: None given
         expires: '2021-04-23T21:37:16.090Z'
+  SNYK-JS-WS-1296835:
+    - grunt-contrib-connect > node-http2 > websocket-stream > ws:
+        reason: None given
+        expires: '2021-09-06T17:39:44.572Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:

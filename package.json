@@ -44,7 +44,6 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "grunt": ">=0.4.1",
     "grunt-contrib-connect": "^3.0.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
@@ -60,9 +59,6 @@
     "package.json-schema": "~0.2.0",
     "prettier": "^2.3.1",
     "xo": "^0.43.0"
-  },
-  "peerDependencies": {
-    "grunt": ">=0.4.1"
   },
   "snyk": true,
   "xo": {
