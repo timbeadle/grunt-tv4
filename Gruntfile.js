@@ -79,7 +79,7 @@ module.exports = function (grunt) {
 				_twice: true,
 				options: {
 					fresh: true,
-					root: 'http://localhost:9090/remote/schema/schema.json'
+					root: 'http://127.0.0.1:9090/remote/schema/schema.json'
 				},
 				src: [
 					'test/fixtures/remote/pass.json',
@@ -90,7 +90,7 @@ module.exports = function (grunt) {
 				_twice: true,
 				options: {
 					fresh: true,
-					root: 'https://localhost:9091/remote-https/schema/schema.json'
+					root: 'https://127.0.0.1:9091/remote-https/schema/schema.json'
 				},
 				src: [
 					'test/fixtures/remote-https/pass.json',
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
 			fail_remote: {
 				options: {
 					fresh: true,
-					root: 'http://localhost:9090/remote/schema/schema.json'
+					root: 'http://127.0.0.1:9090/remote/schema/schema.json'
 				},
 				src: [
 					'test/fixtures/remote/fail.json'
@@ -152,7 +152,7 @@ module.exports = function (grunt) {
 			fail_remote_https: {
 				options: {
 					fresh: true,
-					root: 'https://localhost:9091/remote-https/schema/schema.json'
+					root: 'https://127.0.0.1:9091/remote-https/schema/schema.json'
 				},
 				src: [
 					'test/fixtures/remote-https/fail.json'
@@ -161,7 +161,7 @@ module.exports = function (grunt) {
 			fail_remoteNotFound: {
 				options: {
 					fresh: true,
-					root: 'http://localhost:9090/remote/schema/non-existing.json'
+					root: 'http://127.0.0.1:9090/remote/schema/non-existing.json'
 				},
 				src: [
 					'test/fixtures/remote/pass.json'
@@ -170,7 +170,7 @@ module.exports = function (grunt) {
 			fail_remoteNotFound_https: {
 				options: {
 					fresh: true,
-					root: 'https://localhost:9091/remote-https/schema/non-existing.json'
+					root: 'https://127.0.0.1:9091/remote-https/schema/non-existing.json'
 				},
 				src: [
 					'test/fixtures/remote-https/pass.json'

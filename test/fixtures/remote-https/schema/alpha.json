@@ -3,7 +3,7 @@
 	"required" : ["betaType"],
 	"properties": {
 		"betaType": {
-			"$ref": "https://localhost:9091/remote-https/schema/beta.json"
+			"$ref": "https://127.0.0.1:9091/remote-https/schema/beta.json"
 		}
 	}
 }
