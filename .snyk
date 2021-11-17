@@ -78,7 +78,7 @@ ignore:
   'npm:underscore.string:20170908':
     - grunt > grunt-legacy-util > underscore.string:
         reason: None given
-        expires: '2021-11-24T15:44:56.416Z'
+        expires: '2021-12-17T11:58:23.300Z'
   SNYK-JS-HOSTEDGITINFO-1088355:
     - npm-run-all > read-pkg > normalize-package-data > hosted-git-info:
         reason: None given
@@ -95,7 +95,7 @@ ignore:
   SNYK-JS-WS-1296835:
     - grunt-contrib-connect > node-http2 > websocket-stream > ws:
         reason: None given
-        expires: '2021-11-24T15:44:56.416Z'
+        expires: '2021-12-17T11:58:23.300Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
