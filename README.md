@@ -2,9 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/grunt-tv4.svg)](https://www.npmjs.com/package/grunt-tv4)
 [![Downloads/month](https://img.shields.io/npm/dm/grunt-tv4.svg)](https://www.npmjs.com/package/grunt-tv4)
-[![Build Status](https://travis-ci.com/timbeadle/grunt-tv4.svg?branch=master)](https://travis-ci.com/timbeadle/grunt-tv4)
-[![Dependency Status](https://david-dm.org/timbeadle/grunt-tv4.svg)](https://david-dm.org/timbeadle/grunt-tv4)
-[![devDependency Status](https://david-dm.org/timbeadle/grunt-tv4/dev-status.svg)](https://david-dm.org/timbeadle/grunt-tv4#info=devDependencies)
+[![Build Status](https://github.com/timbeadle/grunt-tv4/workflows/Node.js%20CI/badge.svg)](https://github.com/timbeadle/grunt-tv4)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 [![Code Climate](https://codeclimate.com/github/timbeadle/grunt-tv4/badges/gpa.svg)](https://codeclimate.com/github/timbeadle/grunt-tv4)
 [![DepShield Badge](https://depshield.sonatype.org/badges/timbeadle/grunt-tv4/depshield.svg)](https://depshield.github.io)
 [![Known Vulnerabilities](https://snyk.io/test/github/timbeadle/grunt-tv4/badge.svg)](https://snyk.io/test/github/timbeadle/grunt-tv4)
@@ -173,8 +172,7 @@ grunt.initConfig({
 
 ## History
 
-- See [CHANGELOG.md](CHANGELOG.md).
-
+* See [CHANGELOG](https://github.com/timbeadle/grunt-tv4/blob/main/CHANGELOG.md).
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
