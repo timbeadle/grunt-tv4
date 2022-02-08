@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-/* eslint camelcase: 0, unicorn/filename-case: 0, unicorn/prefer-module: 0 */
+/* eslint camelcase: 0 */
 
 'use strict';
 
@@ -30,175 +30,175 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		eslint: {
 			options: {
-				configFile: '.eslintrc.yml'
+				configFile: '.eslintrc.yml',
 			},
 			src: [
 				'Gruntfile.js',
 				'lib/**/*.js',
-				'tasks/**/*.js'
-			]
+				'tasks/**/*.js',
+			],
 		},
 		connect: {
 			http: {
 				options: {
 					port: 9090,
 					base: 'test/fixtures/',
-				}
+				},
 			},
 			https: {
 				options: {
 					port: 9091,
 					base: 'test/fixtures/',
 					protocol: 'https',
-				}
-			}
+				},
+			},
 		},
 		tv4: {
 			pass_prop: {
 				_twice: true,
 				options: {
 					fresh: true,
-					root: 'test/fixtures/object_props/schema.json'
+					root: 'test/fixtures/object_props/schema.json',
 				},
 				src: [
-					'test/fixtures/object_props/pass_a.json'
-				]
+					'test/fixtures/object_props/pass_a.json',
+				],
 			},
 			pass_many: {
 				options: {
 					fresh: true,
-					root: 'test/fixtures/object_props/schema.json'
+					root: 'test/fixtures/object_props/schema.json',
 				},
 				src: [
 					'test/fixtures/object_props/pass_a.json',
 					'test/fixtures/object_props/pass_b.json',
-					'test/fixtures/object_props/pass_c.json'
-				]
+					'test/fixtures/object_props/pass_c.json',
+				],
 			},
 			pass_remote: {
 				_twice: true,
 				options: {
 					fresh: true,
-					root: 'http://127.0.0.1:9090/remote/schema/schema.json'
+					root: 'http://127.0.0.1:9090/remote/schema/schema.json',
 				},
 				src: [
 					'test/fixtures/remote/pass.json',
-					'test/fixtures/remote/pass.json'
-				]
+					'test/fixtures/remote/pass.json',
+				],
 			},
 			pass_remote_https: {
 				_twice: true,
 				options: {
 					fresh: true,
-					root: 'https://127.0.0.1:9091/remote-https/schema/schema.json'
+					root: 'https://127.0.0.1:9091/remote-https/schema/schema.json',
 				},
 				src: [
 					'test/fixtures/remote-https/pass.json',
-					'test/fixtures/remote-https/pass.json'
-				]
+					'test/fixtures/remote-https/pass.json',
+				],
 			},
 			pass_remote_local: {
 				_twice: true,
 				options: {
 					fresh: true,
-					root: 'test/fixtures/remote/schema/schema.json'
+					root: 'test/fixtures/remote/schema/schema.json',
 				},
 				src: [
 					'test/fixtures/remote/pass.json',
-					'test/fixtures/remote/pass.json'
-				]
+					'test/fixtures/remote/pass.json',
+				],
 			},
 			fail_single: {
 				options: {
 					fresh: true,
-					root: 'test/fixtures/object_props/schema.json'
+					root: 'test/fixtures/object_props/schema.json',
 				},
 				src: [
 					'test/fixtures/object_props/pass_a.json',
-					'test/fixtures/object_props/fail_a.json'
-				]
+					'test/fixtures/object_props/fail_a.json',
+				],
 			},
 			fail_multi: {
 				options: {
 					fresh: true,
 					multi: true,
-					root: 'test/fixtures/object_props/schema.json'
+					root: 'test/fixtures/object_props/schema.json',
 				},
 				src: [
-					'test/fixtures/object_props/fail_a.json'
-				]
+					'test/fixtures/object_props/fail_a.json',
+				],
 			},
 			fail_many_multi: {
 				options: {
 					fresh: true,
 					multi: true,
-					root: 'test/fixtures/object_props/schema.json'
+					root: 'test/fixtures/object_props/schema.json',
 				},
 				src: [
 					'test/fixtures/object_props/fail_a.json',
 					'test/fixtures/object_props/fail_b.json',
-					'test/fixtures/object_props/fail_c.json'
-				]
+					'test/fixtures/object_props/fail_c.json',
+				],
 			},
 			fail_remote: {
 				options: {
 					fresh: true,
-					root: 'http://127.0.0.1:9090/remote/schema/schema.json'
+					root: 'http://127.0.0.1:9090/remote/schema/schema.json',
 				},
 				src: [
-					'test/fixtures/remote/fail.json'
-				]
+					'test/fixtures/remote/fail.json',
+				],
 			},
 			fail_remote_https: {
 				options: {
 					fresh: true,
-					root: 'https://127.0.0.1:9091/remote-https/schema/schema.json'
+					root: 'https://127.0.0.1:9091/remote-https/schema/schema.json',
 				},
 				src: [
-					'test/fixtures/remote-https/fail.json'
-				]
+					'test/fixtures/remote-https/fail.json',
+				],
 			},
 			fail_remoteNotFound: {
 				options: {
 					fresh: true,
-					root: 'http://127.0.0.1:9090/remote/schema/non-existing.json'
+					root: 'http://127.0.0.1:9090/remote/schema/non-existing.json',
 				},
 				src: [
-					'test/fixtures/remote/pass.json'
-				]
+					'test/fixtures/remote/pass.json',
+				],
 			},
 			fail_remoteNotFound_https: {
 				options: {
 					fresh: true,
-					root: 'https://127.0.0.1:9091/remote-https/schema/non-existing.json'
+					root: 'https://127.0.0.1:9091/remote-https/schema/non-existing.json',
 				},
 				src: [
-					'test/fixtures/remote-https/pass.json'
-				]
+					'test/fixtures/remote-https/pass.json',
+				],
 			},
 			pass_format: {
 				options: {
 					fresh: true,
 					root: 'test/fixtures/format/schema.json',
 					formats: {
-						date: dateValidateCallback
-					}
+						date: dateValidateCallback,
+					},
 				},
 				src: [
-					'test/fixtures/format/pass.json'
-				]
+					'test/fixtures/format/pass.json',
+				],
 			},
 			fail_format: {
 				options: {
 					fresh: true,
 					root: 'test/fixtures/format/schema.json',
 					formats: {
-						'date': dateValidateCallback
-					}
+						date: dateValidateCallback,
+					},
 				},
 				src: [
-					'test/fixtures/format/fail.json'
-				]
+					'test/fixtures/format/fail.json',
+				],
 			},
 			pass_bulk: {
 				options: {
@@ -206,13 +206,13 @@ module.exports = function (grunt) {
 					root: 'test/fixtures/bulk/schema/schema.json',
 					add: [
 						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
-						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
-					]
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json'),
+					],
 				},
 				src: [
 					'test/fixtures/bulk/pass.json',
-					'test/fixtures/bulk/pass.json'
-				]
+					'test/fixtures/bulk/pass.json',
+				],
 			},
 			fail_bulk: {
 				options: {
@@ -220,12 +220,12 @@ module.exports = function (grunt) {
 					root: 'test/fixtures/bulk/schema/schema.json',
 					add: [
 						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
-						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
-					]
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json'),
+					],
 				},
 				src: [
-					'test/fixtures/bulk/fail.json'
-				]
+					'test/fixtures/bulk/fail.json',
+				],
 			},
 			pass_rootObject: {
 				options: {
@@ -233,45 +233,41 @@ module.exports = function (grunt) {
 					root: grunt.file.readJSON('test/fixtures/bulk/schema/schema.json'),
 					add: [
 						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
-						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
-					]
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json'),
+					],
 				},
 				src: [
 					'test/fixtures/bulk/pass.json',
-					'test/fixtures/bulk/pass.json'
-				]
+					'test/fixtures/bulk/pass.json',
+				],
 			},
 			pass_rootObject_cb: {
 				options: {
 					fresh: true,
-					root: () => {
-						return grunt.file.readJSON('test/fixtures/bulk/schema/schema.json');
-					},
+					root: () => grunt.file.readJSON('test/fixtures/bulk/schema/schema.json'),
 					add: [
 						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
-						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
-					]
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json'),
+					],
 				},
 				src: [
 					'test/fixtures/bulk/pass.json',
-					'test/fixtures/bulk/pass.json'
-				]
+					'test/fixtures/bulk/pass.json',
+				],
 			},
 			pass_rootObject_add_cb: {
 				options: {
 					fresh: true,
 					root: grunt.file.readJSON('test/fixtures/bulk/schema/schema.json'),
-					add: () => {
-						return [
-							grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
-							grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
-						];
-					}
+					add: () => [
+						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json'),
+					],
 				},
 				src: [
 					'test/fixtures/bulk/pass.json',
-					'test/fixtures/bulk/pass.json'
-				]
+					'test/fixtures/bulk/pass.json',
+				],
 			},
 			fail_rootObject: {
 				options: {
@@ -279,105 +275,103 @@ module.exports = function (grunt) {
 					root: grunt.file.readJSON('test/fixtures/bulk/schema/schema.json'),
 					add: [
 						grunt.file.readJSON('test/fixtures/bulk/schema/alpha.json'),
-						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json')
-					]
+						grunt.file.readJSON('test/fixtures/bulk/schema/beta.json'),
+					],
 				},
 				src: [
-					'test/fixtures/bulk/fail.json'
-				]
+					'test/fixtures/bulk/fail.json',
+				],
 			},
 			pass_subError: {
 				options: {
 					fresh: true,
-					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
+					root: grunt.file.readJSON('test/fixtures/subError/schema.json'),
 				},
 				src: [
-					'test/fixtures/subError/pass.json'
-				]
+					'test/fixtures/subError/pass.json',
+				],
 			},
 			fail_subError: {
 				options: {
 					fresh: true,
-					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
+					root: grunt.file.readJSON('test/fixtures/subError/schema.json'),
 				},
 				src: [
 					'test/fixtures/subError/fail.json',
-					'test/fixtures/subError/fail_deeper.json'
-				]
+					'test/fixtures/subError/fail_deeper.json',
+				],
 			},
 			fail_subErrorMulti: {
 				options: {
 					fresh: true,
 					multi: true,
-					root: grunt.file.readJSON('test/fixtures/subError/schema.json')
+					root: grunt.file.readJSON('test/fixtures/subError/schema.json'),
 				},
 				src: [
-					'test/fixtures/subError/fail_deeper.json'
-				]
+					'test/fixtures/subError/fail_deeper.json',
+				],
 			},
 			pass_values: {
 				options: {
 					fresh: true,
 					multi: true,
 					root: {
-						type: 'string'
-					}
+						type: 'string',
+					},
 				},
 				values: [
 					'valueAlpha',
-					'valueBravo'
-				]
+					'valueBravo',
+				],
 			},
 			fail_valuesArray: {
 				options: {
 					fresh: true,
 					multi: true,
 					root: {
-						type: 'string'
-					}
+						type: 'string',
+					},
 				},
 				values: [
 					false,
-					123
-				]
+					123,
+				],
 			},
 			fail_valuesObject: {
 				options: {
 					fresh: true,
 					multi: true,
 					root: {
-						type: 'string'
-					}
+						type: 'string',
+					},
 				},
 				values: {
-					'myBooleanValue': false,
-					'myNumberValue': 1
-				}
+					myBooleanValue: false,
+					myNumberValue: 1,
+				},
 			},
 			fail_valuesCallback: {
 				options: {
 					fresh: true,
 					multi: true,
 					root: {
-						type: 'string'
-					}
+						type: 'string',
+					},
 				},
-				values: () => {
-					return {
-						'callbackBoolean': false,
-						'callbackNumber': 1
-					};
-				}
+				values: () => ({
+					callbackBoolean: false,
+					callbackNumber: 1,
+				}),
 			},
 			pass_package: {
 				options: {
 					fresh: true,
 					multi: false,
-					root: require('package.json-schema').get()
+					root: require('package.json-schema').get(),
 				},
-				'src': ['./package.json']
-			}
-		}
+				src: ['./package.json'],
+			},
+		},
 	});
 
 	// Used by format checker

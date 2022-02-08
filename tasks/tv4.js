@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/prefer-module, import/extensions */
-
 /*
  * Grunt wrapper for tv4 - grunt-tv4
  * https://github.com/timbeadle/grunt-tv4
@@ -18,7 +16,6 @@ const loader = require('../lib/loader');
 const runnerModule = require('../lib/runner');
 
 module.exports = (grunt) => {
-
 	const out = miniwrite.grunt(grunt);
 	const style = ministyle.grunt();
 	const report = reporter.getReporter(out, style);
@@ -26,23 +23,22 @@ module.exports = (grunt) => {
 		taskTv4,
 		loader.getLoaders(),
 		out,
-		style
+		style,
 	);
 
-	grunt.registerMultiTask('tv4', 'Validate values against json-schema v4.', function() {
+	grunt.registerMultiTask('tv4', 'Validate values against json-schema v4.', function () {
 		const done = this.async();
 
 		// Import options
 		const context = runner.getContext(this.options(runner.getOptions({
-			timeout: 5000
+			timeout: 5000,
 		})));
 
 		const objects = [];
 
 		context.tv4 = context.options.fresh
 			? taskTv4.freshApi()
-			: taskTv4
-		;
+			: taskTv4;
 
 		grunt.util._.each(context.options.schemas, (schema, uri) => {
 			context.tv4.addSchema(uri, schema);
@@ -60,7 +56,7 @@ module.exports = (grunt) => {
 
 		// Flatten list for sanity
 		grunt.util._.each(this.files, (f) => {
-			grunt.util._.some(f.src, (filePath) => { // eslint-disable-line unicorn/no-array-callback-reference
+			grunt.util._.some(f.src, (filePath) => {
 				if (!grunt.file.exists(filePath)) {
 					grunt.log.warn('file "' + filePath + '" not found.');
 					return true;
@@ -69,7 +65,7 @@ module.exports = (grunt) => {
 				objects.push({
 					path: filePath,
 					label: filePath,
-					root: context.options.root
+					root: context.options.root,
 				});
 			});
 		});
@@ -83,7 +79,7 @@ module.exports = (grunt) => {
 
 		if (typeof values === 'object') {
 			const keyPrefix = (Array.isArray(values) ? 'value #' : '');
-			grunt.util._.some(values, (value, key) => { // eslint-disable-line unicorn/no-array-callback-reference
+			grunt.util._.some(values, (value, key) => {
 				objects.push({
 					label: keyPrefix + key,
 					value,
@@ -94,7 +90,7 @@ module.exports = (grunt) => {
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 		if (context.options.add && Array.isArray(context.options.add)) {
-			grunt.util._.some(context.options.add, (schema) => { // eslint-disable-line unicorn/no-array-callback-reference
+			grunt.util._.some(context.options.add, (schema) => {
 				if (typeof schema === 'string') {
 					// Juggle
 					schema = grunt.file.readJSON(schema);
