@@ -64,7 +64,7 @@
     "prettier": "^2.4.1"
   },
   "peerDependencies": {
-    "grunt": ">=1.4.1"
+    "grunt": ">=1.5.0"
   },
   "snyk": true
 }
