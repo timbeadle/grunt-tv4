@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.22.1
+version: v1.25.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-YARGSPARSER-560381:
@@ -96,6 +96,10 @@ ignore:
     - grunt-contrib-connect > node-http2 > websocket-stream > ws:
         reason: None given
         expires: '2022-04-15T11:31:25.066Z'
+    - '*':
+        reason: None Given
+        expires: 2022-07-15T11:11:36.201Z
+        created: 2022-06-15T11:11:36.213Z
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
