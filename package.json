@@ -36,7 +36,8 @@
   },
   "scripts": {
     "test": "run-p test:*",
-    "test-ci": "run-p test:grunt test:lint",
+    "test-ci": "run-p test:grunt test:lint test:engines",
+    "test:engines": "ls-engines",
     "test:grunt": "grunt test",
     "test:lint": "eslint Gruntfile.js lib/*.js tasks/*.js",
     "test:snyk": "snyk test --dev",
@@ -60,6 +61,7 @@
     "eslint-plugin-redos": "^4.4.1",
     "grunt-continue": "^0.1.0",
     "load-grunt-tasks": "^5.1.0",
+    "ls-engines": "^0.7.0",
     "npm-run-all": "^4.1.5",
     "package.json-schema": "~0.2.0",
     "prettier": "^2.4.1"
