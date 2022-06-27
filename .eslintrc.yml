@@ -9,7 +9,9 @@ parserOptions:
   ecmaVersion: 13
 plugins:
   - import
+  - redos
 rules:
   arrow-parens: 0
   object-curly-spacing: 0
   import/no-unresolved: [ 2, { commonjs: true } ]
+  redos/no-vulnerable: error
