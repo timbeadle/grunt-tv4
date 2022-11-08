@@ -2,6 +2,27 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.1.0] - 2022-11-08
+
+### Added
+- eslint-plugin-redos
+- ls-engines
+- NodeJS v19 test run
+- Renovate dependency management
+
+### Updated
+- eslint config
+- @snyk/protect@1.1054.0
+- grunt@1.5.3
+- tv4-reporter@5.0.0
+- eslint@8.27.0
+- eslint-config-xo@0.43.1
+- eslint-plugin-import@2.26.0
+- prettier@2.7.1
+
+### Removed
+- TravisCI test running
+
 ## [6.0.0] - 2022-04-28
 
 ### Added
@@ -232,6 +253,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[6.1.0]: https://github.com/timbeadle/grunt-tv4/compare/6.0.0...6.1.0
 [6.0.0]: https://github.com/timbeadle/grunt-tv4/compare/5.0.1...6.0.0
 [5.0.1]: https://github.com/timbeadle/grunt-tv4/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/timbeadle/grunt-tv4/compare/4.2.0...5.0.0
