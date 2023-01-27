@@ -61,7 +61,7 @@
     "eslint-plugin-redos": "4.4.3",
     "grunt-continue": "0.1.0",
     "load-grunt-tasks": "5.1.0",
-    "ls-engines": "0.8.1",
+    "ls-engines": "0.9.0",
     "npm-run-all": "4.1.5",
     "package.json-schema": "0.2.0",
     "prettier": "2.8.3"
