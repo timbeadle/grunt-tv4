@@ -66,5 +66,8 @@
     "package.json-schema": "0.2.0",
     "prettier": "2.8.6"
   },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  },
   "snyk": true
 }
