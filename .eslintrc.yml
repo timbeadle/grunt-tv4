@@ -9,7 +9,6 @@ parserOptions:
   ecmaVersion: 2021
 plugins:
   - import
-  - redos
 rules:
   arrow-parens: 0
   object-curly-spacing: 0
