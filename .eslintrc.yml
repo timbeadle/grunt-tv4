@@ -1,0 +1,17 @@
+env:
+  browser: true
+  commonjs: true
+  es6: true
+extends:
+  - xo
+  - plugin:import/recommended
+parserOptions:
+  ecmaVersion: 2021
+plugins:
+  - import
+  - redos
+rules:
+  arrow-parens: 0
+  object-curly-spacing: 0
+  import/no-unresolved: [ 2, { commonjs: true } ]
+  redos/no-vulnerable: error
