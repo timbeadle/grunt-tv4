@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main-5.x ]
   pull_request:
-    branches: [ main ]
+    branches: [ main-5.x ]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x, 14.x, 15.x]
+        node-version: [10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -24,6 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: install npm@5.10.0
+      run: npm install -g npm@5.10.0
     - run: npm ci
     - run: npm run test-ci
       env:
