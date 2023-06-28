@@ -24,8 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: install npm@6
-      run: npm install -g npm@6
+    - name: install npm@5.10.0
+      run: npm install -g npm@5.10.0
     - run: npm ci
     - run: npm run test-ci
       env:
