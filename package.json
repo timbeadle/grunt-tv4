@@ -70,5 +70,9 @@
       "node"
     ],
     "prettier": true
+  },
+  "volta": {
+    "node": "10.0.0",
+    "npm": "5.10.0"
   }
 }
