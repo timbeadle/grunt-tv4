@@ -66,15 +66,5 @@
   "peerDependencies": {
     "grunt": ">=0.4.1"
   },
-  "snyk": true,
-  "xo": {
-    "env": [
-      "node"
-    ],
-    "prettier": true,
-    "rules": {
-      "arrow-body-style": 0,
-      "unicorn/no-array-method-this-argument": 0
-    }
-  }
+  "snyk": true
 }
