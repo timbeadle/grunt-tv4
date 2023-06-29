@@ -1,12 +1,11 @@
 env:
-  browser: true
-  commonjs: true
-  es2021: true
+  es6: true
+  node: true
 extends:
   - xo
   - plugin:import/recommended
 parserOptions:
-  ecmaVersion: 13
+  ecmaVersion: 2017
 plugins:
   - import
 rules:
