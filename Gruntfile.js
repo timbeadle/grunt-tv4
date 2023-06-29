@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-/* eslint camelcase: 0, import/no-unresolved: 0 */
+/* eslint camelcase: 0 */
 
 'use strict';
 
