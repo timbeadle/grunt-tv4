@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 /*
  * Grunt wrapper for tv4 - grunt-tv4
  * https://github.com/timbeadle/grunt-tv4
