@@ -45,7 +45,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@snyk/protect": "^1.1054.0",
+    "@snyk/protect": "^1.1227.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
     "miniwrite": "~0.1.4",
@@ -72,6 +72,6 @@
   "snyk": true,
   "volta": {
     "node": "14.0.0",
-    "npm": "6.14.18"
+    "npm": "7.24.2"
   }
 }
