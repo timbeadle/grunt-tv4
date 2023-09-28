@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.0.0] - 2023-09-28
+### Updated
+- @snyk/protect@1.1228.0
+- grunt@1.6.1
+- tv4-reporter@7.0.0
+- engines.node >= 16.14
+- Volta pin node@16.20.2, npm@9.8.1
+
+### Removed
+- NodeJS v14 test runs
+
 ## [6.2.0] - 2023-09-28
 
 ### Added
@@ -274,6 +285,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[7.0.0]: https://github.com/timbeadle/grunt-tv4/compare/6.2.0...7.0.0
 [6.2.0]: https://github.com/timbeadle/grunt-tv4/compare/6.1.0...6.2.0
 [6.1.0]: https://github.com/timbeadle/grunt-tv4/compare/6.0.0...6.1.0
 [6.0.0]: https://github.com/timbeadle/grunt-tv4/compare/5.0.1...6.0.0
