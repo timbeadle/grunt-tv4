@@ -2,6 +2,27 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.2.0] - 2023-09-28
+
+### Added
+- NodeJS 14.0.x, 14.13.x, 14.17.x, 20.x test runs
+- peerDependencies: grunt >= 0.4.0
+- Volta pin node@14.0.0, npm@7.24.2
+
+### Updated
+- @snyk/protect@1.1227.0
+- eslint-plugin-import@2.28.1
+- eslint-plugin-redos@4.4.5
+- eslint@8.50.0
+- grunt-contrib-connect@4.0.0
+- ls-engines@0.9.0
+- prettier@3.0.3
+- tv4-reporter@6.0.0
+- actions/checkout@v4
+
+### Removed
+- NodeJS 19.x test run
+
 ## [6.1.0] - 2022-11-08
 
 ### Added
@@ -253,6 +274,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[6.2.0]: https://github.com/timbeadle/grunt-tv4/compare/6.1.0...6.2.0
 [6.1.0]: https://github.com/timbeadle/grunt-tv4/compare/6.0.0...6.1.0
 [6.0.0]: https://github.com/timbeadle/grunt-tv4/compare/5.0.1...6.0.0
 [5.0.1]: https://github.com/timbeadle/grunt-tv4/compare/5.0.0...5.0.1
