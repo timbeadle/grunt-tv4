@@ -3,5 +3,13 @@
   "extends": [
     "config:base"
   ],
-  "baseBranches": ["main", "/^main-.*/"]
+  "baseBranches": ["main", "/^main-.*/"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^eslint"],
+      "groupName": "eslint packages"
+    }
+  ],
+  "rangeStrategy": "bump",
+  "transitiveRemediation": true
 }
