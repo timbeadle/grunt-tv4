@@ -67,7 +67,7 @@
     "prettier": "3.0.3"
   },
   "peerDependencies": {
-    "grunt": ">=0.4.0"
+    "grunt": ">=1.6.1"
   },
   "snyk": true,
   "volta": {
