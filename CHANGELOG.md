@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.2.2] - 2024-03-05
+### Updated
+- tv4-reporter@6.1.0
+
 ## [6.2.1] - 2024-03-05
 ### Added
 - npm-run-all2
@@ -297,6 +301,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[6.2.2]: https://github.com/timbeadle/grunt-tv4/compare/6.2.1...6.2.2
 [6.2.1]: https://github.com/timbeadle/grunt-tv4/compare/6.2.0...6.2.1
 [6.2.0]: https://github.com/timbeadle/grunt-tv4/compare/6.1.0...6.2.0
 [6.1.0]: https://github.com/timbeadle/grunt-tv4/compare/6.0.0...6.1.0
