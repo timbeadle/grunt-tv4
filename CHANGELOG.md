@@ -16,7 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - eslint@8.57.0
 - ls-engines@0.9.1
 - prettier@3.2.5
-- tv4-reporter@7.1.0
+- tv4-reporter@6.1.0
 - actions/setup-node@v4
 - github/codeql-action/init@v3
 - github/codeql-action/autobuild@v3
