@@ -2,6 +2,29 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.2.1] - 2024-03-05
+### Added
+- npm-run-all2
+- `versioning-strategy: increase` in dependabot.yml
+- `packageRules`, `rangeStrategy`, `transitiveRemediation` in renovate.json
+
+### Updated
+- Added an annotation to satisfy an eslint rule
+- @snyk/protect@1.1282.1
+- eslint-config-xo@0.44.0
+- eslint-plugin-import@2.29.1
+- eslint@8.57.0
+- ls-engines@0.9.1
+- prettier@3.2.5
+- tv4-reporter@7.1.0
+- actions/setup-node@v4
+- github/codeql-action/init@v3
+- github/codeql-action/autobuild@v3
+- github/codeql-action/analyze@v3
+
+### Removed
+- npm-run-all
+
 ## [6.2.0] - 2023-09-28
 
 ### Added
@@ -274,6 +297,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[6.2.1]: https://github.com/timbeadle/grunt-tv4/compare/6.2.0...6.2.1
 [6.2.0]: https://github.com/timbeadle/grunt-tv4/compare/6.1.0...6.2.0
 [6.1.0]: https://github.com/timbeadle/grunt-tv4/compare/6.0.0...6.1.0
 [6.0.0]: https://github.com/timbeadle/grunt-tv4/compare/5.0.1...6.0.0
