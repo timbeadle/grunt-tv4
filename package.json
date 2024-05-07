@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "eslint": "8.57.0",
-    "eslint-config-xo": "0.44.0",
+    "eslint-config-xo": "0.45.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-redos": "4.4.5",
     "grunt": "^1.5.3",
