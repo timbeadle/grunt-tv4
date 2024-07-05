@@ -5,7 +5,7 @@ notifications:
 language: node_js
 node_js:
   - "10"
-  - "11"
+  - "11.15.0"
   - "12"
   - "13"
   - "14"
