@@ -40,16 +40,16 @@
     "test:grunt": "grunt test",
     "test:lint": "xo Gruntfile.js lib/**/*.js tasks/**/*.js",
     "test:snyk": "snyk test --dev",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
+    "@snyk/protect": "^1.1292.1",
     "grunt": "^1.3.0",
     "grunt-contrib-connect": "^3.0.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
     "miniwrite": "~0.1.3",
-    "snyk": "^1.430.0",
     "tv4": "^1.1.0",
     "tv4-reporter": "^4.3.0"
   },
@@ -70,5 +70,9 @@
       "node"
     ],
     "prettier": true
+  },
+  "volta": {
+    "node": "10.24.1",
+    "npm": "6.14.18"
   }
 }
