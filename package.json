@@ -62,7 +62,7 @@
     "xo": "^0.39.1"
   },
   "peerDependencies": {
-    "grunt": ">=0.4.1"
+    "grunt": ">=0.4.5"
   },
   "snyk": true,
   "xo": {
