@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@snyk/protect": "^1.1292.1",
-    "grunt": "^1.5.3",
+    "grunt": "^1.6.1",
     "grunt-contrib-connect": "^3.0.0",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
@@ -62,7 +62,7 @@
     "xo": "^0.39.1"
   },
   "peerDependencies": {
-    "grunt": ">=0.4.1"
+    "grunt": ">=1.6.1"
   },
   "snyk": true,
   "xo": {
