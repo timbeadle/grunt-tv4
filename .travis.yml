@@ -4,7 +4,7 @@ notifications:
       - tim@takkconsulting.co.uk
 language: node_js
 node_js:
-  - "10"
+  - "10.24.1"
   - "11"
   - "12"
   - "13"
