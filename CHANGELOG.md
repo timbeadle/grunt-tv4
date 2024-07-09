@@ -2,6 +2,34 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.2] - 2024-07-09
+### Added
+- @snyk/protect
+- npm-run-all2
+- volta pin node@10 and npm@6
+
+### Updated
+- Updated code to match new xo rules
+- grunt@1.5.3
+- miniwrite@0.1.4
+- prettier@2.8.8
+- tv4-reporter@4.3.3
+- tv4@1.3.0
+- xo@0.39.1
+- actions/checkout@v4
+- actions/setup-node@v4
+- github/codeql-action/analyze@v3
+- github/codeql-action/autobuild@v3
+- github/codeql-action/init@v3
+
+### Removed
+- npm-run-all
+- snyk (use @snyk/protect instead)
+
+## [5.0.1] - 2020-11-21
+### Added
+- https support, and tests to verify this
+
 ## [5.0.0] - 2020-11-20
 
 ### Added
@@ -206,6 +234,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[5.0.2]: https://github.com/timbeadle/grunt-tv4/compare/5.0.1...5.0.2
+[5.0.1]: https://github.com/timbeadle/grunt-tv4/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/timbeadle/grunt-tv4/compare/4.2.0...5.0.0
 [4.2.0]: https://github.com/timbeadle/grunt-tv4/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/timbeadle/grunt-tv4/compare/4.0.0...4.1.0
