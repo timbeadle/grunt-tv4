@@ -32,7 +32,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">=16.14"
+    "node": ">=18"
   },
   "scripts": {
     "test": "run-p test:*",
