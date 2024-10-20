@@ -39,7 +39,7 @@
     "test-ci": "run-p test:grunt test:lint test:engines",
     "test:engines": "ls-engines",
     "test:grunt": "grunt test",
-    "test:lint": "eslint Gruntfile.js lib/*.js tasks/*.js",
+    "test:lint": "xo Gruntfile.js lib/*.js tasks/*.js",
     "test:snyk": "snyk test --dev",
     "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
@@ -53,10 +53,6 @@
     "tv4-reporter": "^7.1.0"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-config-xo": "0.45.0",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-redos": "4.4.5",
     "grunt": "^1.6.1",
     "grunt-continue": "0.1.0",
     "grunt-contrib-connect": "^5.0.0",
@@ -64,7 +60,8 @@
     "ls-engines": "0.9.3",
     "npm-run-all2": "6.2.3",
     "package.json-schema": "0.2.0",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "xo": "^0.59.3"
   },
   "peerDependencies": {
     "grunt": ">=1.6.1"
