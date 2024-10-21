@@ -55,10 +55,10 @@
   "devDependencies": {
     "grunt": "^1.6.1",
     "grunt-continue": "0.1.0",
-    "grunt-contrib-connect": "^5.0.0",
+    "grunt-contrib-connect": "^5.0.1",
     "load-grunt-tasks": "5.1.0",
     "ls-engines": "0.9.3",
-    "npm-run-all2": "6.2.3",
+    "npm-run-all2": "6.2.4",
     "package.json-schema": "0.2.0",
     "prettier": "3.3.3",
     "xo": "^0.59.3"
