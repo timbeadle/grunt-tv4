@@ -58,7 +58,7 @@
     "grunt-contrib-connect": "^5.0.1",
     "load-grunt-tasks": "5.1.0",
     "ls-engines": "0.9.3",
-    "npm-run-all2": "8.0.1",
+    "npm-run-all2": "8.0.2",
     "package.json-schema": "0.2.0",
     "prettier": "3.5.3",
     "xo": "^0.60.0"
