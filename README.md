@@ -5,7 +5,6 @@
 [![Build Status](https://github.com/timbeadle/grunt-tv4/workflows/Node.js%20CI/badge.svg)](https://github.com/timbeadle/grunt-tv4)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 [![Code Climate](https://codeclimate.com/github/timbeadle/grunt-tv4/badges/gpa.svg)](https://codeclimate.com/github/timbeadle/grunt-tv4)
-[![DepShield Badge](https://depshield.sonatype.org/badges/timbeadle/grunt-tv4/depshield.svg)](https://depshield.github.io)
 [![Known Vulnerabilities](https://snyk.io/test/github/timbeadle/grunt-tv4/badge.svg)](https://snyk.io/test/github/timbeadle/grunt-tv4)
 
 > Use grunt and [Tiny Validator tv4](https://github.com/geraintluff/tv4) to validate values against [json-schema](http://json-schema.org/) draft v4
