@@ -12,8 +12,8 @@ const taskTv4 = require('tv4').freshApi();
 const reporter = require('tv4-reporter');
 const ministyle = require('ministyle');
 const miniwrite = require('miniwrite');
-const loader = require('../lib/loader');
-const runnerModule = require('../lib/runner');
+const loader = require('../lib/loader.js');
+const runnerModule = require('../lib/runner.js');
 
 module.exports = (grunt) => {
 	const out = miniwrite.grunt(grunt);
