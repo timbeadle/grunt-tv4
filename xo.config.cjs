@@ -14,5 +14,7 @@ module.exports = {
 		'unicorn/prefer-string-replace-all': 0,
 		'unicorn/prevent-abbreviations': 0,
 		'unicorn/switch-case-braces': 0,
+		'@stylistic/object-curly-spacing': ['error', 'always'],
+		'@stylistic/arrow-parens': ['error', 'always'],
 	},
 };
