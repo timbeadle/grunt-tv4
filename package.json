@@ -45,7 +45,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@snyk/protect": "^1.1297.2",
+    "@snyk/protect": "^1.1297.3",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
     "miniwrite": "~0.1.4",
