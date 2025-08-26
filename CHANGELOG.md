@@ -2,6 +2,27 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.0] - 2025-08-26
+### Added
+- xo
+- NodeJS 22, 24 test runs
+
+### Updated
+- @snyk/protect@1.1298.3
+- grunt-contrib-connect@5.0.1
+- grunt@1.6.1
+- ls-engines@0.9.3
+- npm-run-all2@8.0.4
+- prettier@3.6.2
+- tv4-reporter@8.0.
+- (Volta) node@20.19.4
+- (Volta) npm@11.5.2
+
+### Removed
+- ESLint
+- NodeJS v16, v18 support and test runs
+- DepShield badge (obsolete)
+
 ## [7.1.0] - 2024-03-05
 ### Added
 - npm-run-all2
@@ -309,6 +330,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[8.0.0]: https://github.com/timbeadle/grunt-tv4/compare/7.1.0...8.0.0
 [7.1.0]: https://github.com/timbeadle/grunt-tv4/compare/7.0.0...7.1.0
 [7.0.0]: https://github.com/timbeadle/grunt-tv4/compare/6.2.0...7.0.0
 [6.2.0]: https://github.com/timbeadle/grunt-tv4/compare/6.1.0...6.2.0
