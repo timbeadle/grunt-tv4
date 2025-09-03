@@ -32,7 +32,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 20.19.4"
+    "node": ">= 20.19.5"
   },
   "scripts": {
     "test": "run-p test:*",
@@ -68,7 +68,7 @@
   },
   "snyk": true,
   "volta": {
-    "node": "20.19.4",
+    "node": "20.19.5",
     "npm": "11.5.2"
   }
 }
