@@ -32,7 +32,7 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 20.19.4"
+    "node": ">= 20.19.5"
   },
   "scripts": {
     "test": "run-p test:*",
@@ -45,7 +45,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@snyk/protect": "^1.1298.3",
+    "@snyk/protect": "^1.1300.1",
     "jsonpointer.js": "~0.4.0",
     "ministyle": "~0.1.4",
     "miniwrite": "~0.1.4",
@@ -61,14 +61,14 @@
     "npm-run-all2": "8.0.4",
     "package.json-schema": "0.2.0",
     "prettier": "3.6.2",
-    "xo": "^1.2.2"
+    "xo": "^1.2.3"
   },
   "peerDependencies": {
     "grunt": ">=1.6.1"
   },
   "snyk": true,
   "volta": {
-    "node": "20.19.4",
-    "npm": "11.5.2"
+    "node": "20.19.5",
+    "npm": "11.6.2"
   }
 }
