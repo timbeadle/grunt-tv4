@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.1.0] - 2026-02-10
+### Updated
+- @snyk/protect@1.1302.1
+- ls-engines@0.9.4
+- prettier@3.8.1
+- tv4-reporter@8.1.0
+- xo@1.2.3
+- (engines) node@20.20.0
+- (Volta) node@20.20.0
+- (Volta) npm@11.8.0
+
 ## [8.0.0] - 2025-08-26
 ### Added
 - xo
@@ -330,6 +341,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.1.0
 - First release with synchronous validation
 
+[8.1.0]: https://github.com/timbeadle/grunt-tv4/compare/8.0.0...8.1.0
 [8.0.0]: https://github.com/timbeadle/grunt-tv4/compare/7.1.0...8.0.0
 [7.1.0]: https://github.com/timbeadle/grunt-tv4/compare/7.0.0...7.1.0
 [7.0.0]: https://github.com/timbeadle/grunt-tv4/compare/6.2.0...7.0.0
