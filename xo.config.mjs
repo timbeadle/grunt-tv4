@@ -1,5 +1,11 @@
-export default [
+const config = [
 	{
+		files: [
+			'xo.config.mjs',
+			'Gruntfile.js',
+			'lib/*.js',
+			'tasks/*.js',
+		],
 		rules: {
 			'arrow-parens': 0,
 			'import/extensions': 0,
@@ -18,5 +24,7 @@ export default [
 			'@stylistic/object-curly-spacing': ['error', 'always'],
 			'@stylistic/arrow-parens': ['error', 'always'],
 		},
-	}
+	},
 ];
+
+export default config;
