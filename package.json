@@ -39,7 +39,7 @@
     "test-ci": "run-p test:grunt test:lint test:engines",
     "test:engines": "ls-engines",
     "test:grunt": "grunt test",
-    "test:lint": "xo Gruntfile.js lib/*.js tasks/*.js",
+    "test:lint": "xo",
     "test:snyk": "snyk test --dev",
     "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
@@ -61,7 +61,7 @@
     "npm-run-all2": "8.0.4",
     "package.json-schema": "0.2.0",
     "prettier": "3.8.1",
-    "xo": "^1.2.3"
+    "xo": "^2.0.2"
   },
   "peerDependencies": {
     "grunt": ">=1.6.1"

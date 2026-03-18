@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 	grunt.loadTasks('tasks');
 
 	// Used by format checker
-	const dateRegex = /^\d{4}(?:-\d{1,2}){2}$/;
+	const dateRegex = /^\d{4}(?:-\d{1,2}){2}$/v;
 	const dateValidateCallback = (data) => {
 		if (typeof data !== 'string' || !dateRegex.test(data)) {
 			// Return error message
@@ -378,7 +378,7 @@ module.exports = function (grunt) {
 	const passNames = [];
 	const failNames = [];
 	const conf = grunt.config.get('tv4');
-	const confKeys = Object.keys(conf).sort();
+	const confKeys = Object.keys(conf).toSorted();
 
 	for (const name of confKeys) {
 		if (name.startsWith('pass_')) {
