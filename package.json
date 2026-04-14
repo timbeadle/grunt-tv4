@@ -53,7 +53,7 @@
     "tv4-reporter": "^8.1.0"
   },
   "devDependencies": {
-    "grunt": "^1.6.1",
+    "grunt": "^1.6.2",
     "grunt-continue": "0.1.0",
     "grunt-contrib-connect": "^5.0.1",
     "load-grunt-tasks": "5.1.0",
@@ -64,7 +64,7 @@
     "xo": "^2.0.2"
   },
   "peerDependencies": {
-    "grunt": ">=1.6.1"
+    "grunt": ">=1.6.2"
   },
   "snyk": true,
   "volta": {
