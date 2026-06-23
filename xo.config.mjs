@@ -8,6 +8,7 @@ const config = [
 		],
 		rules: {
 			'arrow-parens': 0,
+			'no-shadow': 0,
 			'import/extensions': 0,
 			'n/prefer-global/process': 0,
 			'n/prefer-promises/fs': 0,
@@ -18,8 +19,10 @@ const config = [
 			'unicorn/no-typeof-undefined': 0,
 			'unicorn/prefer-module': 0,
 			'unicorn/prefer-native-coercion-functions': 0,
+			'unicorn/prefer-queue-microtask': 0,
 			'unicorn/prefer-string-replace-all': 0,
 			'unicorn/prevent-abbreviations': 0,
+			'unicorn/require-array-sort-compare': 0,
 			'unicorn/switch-case-braces': 0,
 			'@stylistic/object-curly-spacing': ['error', 'always'],
 			'@stylistic/arrow-parens': ['error', 'always'],

@@ -61,14 +61,14 @@
     "npm-run-all2": "9.0.2",
     "package.json-schema": "0.2.0",
     "prettier": "3.8.4",
-    "xo": "^2.0.2"
+    "xo": "^3.0.2"
   },
   "peerDependencies": {
     "grunt": ">=1.6.2"
   },
   "snyk": true,
   "volta": {
-    "node": "20.20.2",
+    "node": "22.23.1",
     "npm": "11.17.0"
   }
 }
