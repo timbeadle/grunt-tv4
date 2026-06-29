@@ -60,7 +60,7 @@
     "ls-engines": "0.10.1",
     "npm-run-all2": "9.0.2",
     "package.json-schema": "0.2.0",
-    "prettier": "3.8.4",
+    "prettier": "3.9.1",
     "xo": "^3.0.2"
   },
   "peerDependencies": {
