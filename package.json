@@ -61,7 +61,7 @@
     "npm-run-all2": "9.0.2",
     "package.json-schema": "0.2.0",
     "prettier": "3.9.4",
-    "xo": "^3.0.2"
+    "xo": "^4.0.0"
   },
   "peerDependencies": {
     "grunt": ">=1.6.2"
