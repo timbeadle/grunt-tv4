@@ -10,5 +10,7 @@ updates:
     versioning-strategy: increase
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     assignees:
       - "timbeadle"
